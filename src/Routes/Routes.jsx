@@ -17,7 +17,6 @@ const Routes = createBrowserRouter([
       {
         path: "under",
         element: <UnderPart></UnderPart>,
-        // loader: () => fetch("../../public/under.json"),
       },
     ],
   },
