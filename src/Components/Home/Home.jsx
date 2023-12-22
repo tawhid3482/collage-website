@@ -1,13 +1,15 @@
 import About from "../About/About";
 import Banner from "../Banner/Banner";
+import Campus from "../Campus/Campus";
 import UnderPart from "../UnderBannerPart/UnderPart";
 
 const Home = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <Banner></Banner>
             <UnderPart></UnderPart>
             <About></About>
+            <Campus></Campus>
         </div>
     );
 };

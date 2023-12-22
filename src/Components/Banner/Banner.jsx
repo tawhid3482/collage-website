@@ -2,11 +2,11 @@ import banner from '../../assets/25398880_10154951833596890_317498250930511676_n
 const Banner = () => {
   return (
     <div>
-      <div className="hero lg:h-96 bg-base-200">
+      <div className="hero lg:h-[450px] bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={banner}
-            className="lg:w-2/3 lg:h-80 rounded-lg shadow-2xl"
+            className="lg:w-2/3 lg:h-96 rounded-lg shadow-2xl"
           />
           <div className=''>
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">Sylhet Polytacnic Institute</h1>
