@@ -7,7 +7,7 @@ console.log(news)
   return (
     <div className="my-5">
       <div className="flex items-center justify-center">
-        <p className="text-3xl font-bold w-80 ">News & Updates</p>{" "}
+        <p className="text-3xl font-bold w-80 ">News & Updates</p>
         <hr className="w-full border-green-800" />
       </div>
       <p className="text-green-500 mb-2">Read All News</p>
