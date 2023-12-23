@@ -5,7 +5,7 @@ const EventCard = ({ event }) => {
   const { name, img, date, location, time } = event;
   return (
     <div>
-      <div className="card card-compact w-96 h-96 bg-base-100 shadow-xl mb-5">
+      <div className="card card-compact w-96 md:w-[350px] lg:w-96 h-96 bg-base-100 shadow-xl mb-5">
         <figure>
           <img src={img} className="h-60" alt="Shoes" />
         </figure>
