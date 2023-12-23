@@ -1,5 +1,4 @@
 const UnderCard = ({ under }) => {
-  console.log(under);
   const {name,title,img}=under
   return (
     <div>

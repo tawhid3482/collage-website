@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayOut from "../Components/LayOut/MainLayOut";
 import Errorpage from "../Components/ErrorPage/Errorpage";
 import Home from "../Components/Home/Home";
-import UnderPart from "../Components/UnderBannerPart/UnderPart";
 
 const Routes = createBrowserRouter([
   {
@@ -14,10 +13,11 @@ const Routes = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      {
-        path: "under",
-        element: <UnderPart></UnderPart>,
-      },
+      // {
+      //   path: "/",
+      //   element: <Events></Events>,
+      //   loader:()=>fetch('/events.json')
+      // },
     ],
   },
 ]);
