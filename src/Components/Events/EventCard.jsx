@@ -1,7 +1,6 @@
 import { FaClock, FaLocationArrow,  } from "react-icons/fa";
 
 const EventCard = ({ event }) => {
-  console.log(event);
   const { name, img, date, location, time } = event;
   return (
     <div>

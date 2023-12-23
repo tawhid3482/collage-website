@@ -1,4 +1,5 @@
 import About from "../About/About";
+import AllNews from "../AllNews/AllNews";
 import Banner from "../Banner/Banner";
 import Campus from "../Campus/Campus";
 import Events from "../Events/Events";
@@ -14,6 +15,7 @@ const Home = () => {
             <Campus></Campus>
             <Students></Students>
             <Events></Events>
+            <AllNews></AllNews>
         </div>
     );
 };
