@@ -16,7 +16,7 @@ const Sponser = () => {
           <img src={pic3} className="w-60 h-40" alt="" />
         </div>
         <div className="flex justify-center items-center">
-            <p className="text-5xl font-semibold text-white">T | I | S</p>
+            <p className="text-5xl font-semibold text-white"> T | I | S</p>
         </div>
       </div>
     </div>
