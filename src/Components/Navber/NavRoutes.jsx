@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const NavRoutes = ({route}) => {
   return (
     <div>
-      <li className=" m-2 md:m-0 md:ml-6 p-1 rounded-lg w-16 md:w-16 text-center hover:bg-black ">
+      <li className=" m-2 md:m-0 md:ml-8 p-1 rounded-lg  w-full text-center hover:bg-black hover:text-white ">
         <NavLink
           to={route.path}
           className={({ isActive, isPending }) =>
