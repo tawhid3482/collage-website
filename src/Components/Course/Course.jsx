@@ -2,8 +2,16 @@ const Course = () => {
   return (
     <div className="bg-gray-500 p-5 ">
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-3">
-        <input type="text" className="bg-gray-400 text-white p-3" />
-        <input type="text" className="bg-gray-400 text-white p-3" />
+        <input
+          type="text"
+          placeholder="Keywords"
+          className="bg-gray-400 text-white p-3"
+        />
+        <input
+          type="text"
+          placeholder="Course ID"
+          className="bg-gray-400 text-white p-3"
+        />
         <div className="text-white bg-gray-400">
           <select className="text-white bg-gray-400 p-3 w-full" name="" id="">
             <option className="text-white bg-gray-400" value="">
@@ -31,7 +39,6 @@ const Course = () => {
             <option className="text-white bg-gray-400" value="Roqaya Hall">
               Roqaya Hall
             </option>
-           
           </select>
         </div>
 
@@ -44,64 +51,52 @@ const Course = () => {
               Graduate
             </option>
             <option className="text-white bg-gray-400" value="SPI Hall">
-             Undergraduate
+              Undergraduate
             </option>
-          
-           
           </select>
         </div>
         <div className="text-white bg-gray-400">
           <select className="text-white bg-gray-400 p-3 w-full" name="" id="">
             <option className="text-white bg-gray-400" value="">
-              Campus
+              Instructor
             </option>
             <option className="text-white bg-gray-400" value="Adman's Hall">
-              Admans Hall
+              Saikat
             </option>
             <option className="text-white bg-gray-400" value="SPI Hall">
-              SPI Hall
+              Tawhidul Islam
             </option>
-            <option className="text-white bg-gray-400" value="Roqaya Hall">
-              Roqaya Hall
-            </option>
-           
           </select>
         </div>
         <div className="text-white bg-gray-400">
           <select className="text-white bg-gray-400 p-3 w-full" name="" id="">
             <option className="text-white bg-gray-400" value="">
-              Campus
+              Semester
             </option>
             <option className="text-white bg-gray-400" value="Adman's Hall">
-              Admans Hall
+              Fall
             </option>
             <option className="text-white bg-gray-400" value="SPI Hall">
-              SPI Hall
+              Spring 2022
             </option>
-            <option className="text-white bg-gray-400" value="Roqaya Hall">
-              Roqaya Hall
-            </option>
-           
           </select>
         </div>
         <div className="text-white bg-gray-400">
           <select className="text-white bg-gray-400 p-3 w-full" name="" id="">
             <option className="text-white bg-gray-400" value="">
-              Campus
+              Method
             </option>
             <option className="text-white bg-gray-400" value="Adman's Hall">
-              Admans Hall
+              Seminar
             </option>
             <option className="text-white bg-gray-400" value="SPI Hall">
-              SPI Hall
+              Lecture
             </option>
             <option className="text-white bg-gray-400" value="Roqaya Hall">
-              Roqaya Hall
+              Online
             </option>
-           
           </select>
         </div>
-        
       </div>
     </div>
   );
