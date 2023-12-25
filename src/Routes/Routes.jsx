@@ -17,7 +17,7 @@ const Routes = createBrowserRouter([
       //   path: "/",
       //   element: <Events></Events>,
       //   loader:()=>fetch('/events.json')
-      // },
+      // }
     ],
   },
 ]);
