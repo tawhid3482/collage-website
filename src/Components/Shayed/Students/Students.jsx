@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import students from "../../../assets/student.jpg";
 const Students = () => {
   return (
@@ -16,7 +17,9 @@ const Students = () => {
               career—to discover a field they’re passionate about and dare to
               lead it.
             </p>
-            <button className="btn bg-green-800 text-white">Applay Now</button>
+           <Link to='/admission'> 
+           <button className="btn bg-green-800 text-white">Applay Now</button>
+           </Link>
           </div>
         </div>
       </div>

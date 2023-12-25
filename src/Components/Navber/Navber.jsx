@@ -16,7 +16,7 @@ const Navber = () => {
   ];
 
   return (
-    <nav className=" flex justify-between items-center md:justify-center md:items-center md:text-black p-1 bg-base-200">
+    <nav className=" fixed w-full z-30 flex justify-between items-center md:justify-center md:items-center md:text-black p-1 bg-base-200">
       <div className="">
         {/* <p className="text-3xl font-bold">SPI</p> */}
         <div className="hidden dropdown">

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayOut from "../Components/LayOut/MainLayOut";
 import Errorpage from "../Components/ErrorPage/Errorpage";
 import Home from "../Components/Home/Home";
+import Admission from "../Adminision/Admission";
 
 const Routes = createBrowserRouter([
   {
@@ -13,11 +14,10 @@ const Routes = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      // {
-      //   path: "/",
-      //   element: <Events></Events>,
-      //   loader:()=>fetch('/events.json')
-      // },
+      {
+        path: "admission",
+        element:<Admission></Admission>
+      },
     ],
   },
 ]);

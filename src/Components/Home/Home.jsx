@@ -13,6 +13,9 @@ import UnderPart from "../UnderBannerPart/UnderPart";
 const Home = () => {
     return (
         <div className="container mx-auto">
+            <br />
+            <br />
+            <br />
             <Banner></Banner>
             <UnderPart></UnderPart>
             <About></About>
