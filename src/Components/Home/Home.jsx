@@ -7,6 +7,7 @@ import Events from "../Events/Events";
 import Qlinks from "../Q-links/Qlinks";
 import Students from "../Shayed/Students/Students";
 import Slider from "../Slider/Slider";
+import Sponser from "../Sponser/Sponser";
 import UnderPart from "../UnderBannerPart/UnderPart";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
             <Slider></Slider>
             <Course></Course>
             <Qlinks></Qlinks>
+            <Sponser></Sponser>
         </div>
     );
 };
