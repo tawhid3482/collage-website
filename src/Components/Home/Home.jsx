@@ -4,6 +4,7 @@ import Banner from "../Banner/Banner";
 import Campus from "../Campus/Campus";
 import Course from "../Course/Course";
 import Events from "../Events/Events";
+import Qlinks from "../Q-links/Qlinks";
 import Students from "../Shayed/Students/Students";
 import Slider from "../Slider/Slider";
 import UnderPart from "../UnderBannerPart/UnderPart";
@@ -20,6 +21,7 @@ const Home = () => {
             <AllNews></AllNews>
             <Slider></Slider>
             <Course></Course>
+            <Qlinks></Qlinks>
         </div>
     );
 };
