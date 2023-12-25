@@ -2,8 +2,10 @@ import About from "../About/About";
 import AllNews from "../AllNews/AllNews";
 import Banner from "../Banner/Banner";
 import Campus from "../Campus/Campus";
+import Course from "../Course/Course";
 import Events from "../Events/Events";
 import Students from "../Shayed/Students/Students";
+import Slider from "../Slider/Slider";
 import UnderPart from "../UnderBannerPart/UnderPart";
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
             <Students></Students>
             <Events></Events>
             <AllNews></AllNews>
+            <Slider></Slider>
+            <Course></Course>
         </div>
     );
 };
