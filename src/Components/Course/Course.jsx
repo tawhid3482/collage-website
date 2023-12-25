@@ -1,11 +1,12 @@
 const Course = () => {
   return (
     <div className="bg-gray-500 p-5 ">
+        <p className="text-3xl font-bold  text-center text-white my-4">Search For Courses</p>
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-3">
         <input
           type="text"
           placeholder="Keywords"
-          className="bg-gray-400 text-white p-3"
+          className="bg-gray-400 text-white p-3 "
         />
         <input
           type="text"
@@ -97,6 +98,9 @@ const Course = () => {
             </option>
           </select>
         </div>
+      </div>
+      <div className="text-center my-5">
+        <button className="btn bg-green-500 border-none text-white">Search Course</button>
       </div>
     </div>
   );
