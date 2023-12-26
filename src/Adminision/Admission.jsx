@@ -1,4 +1,5 @@
 import AdmissionBanner from "./AdmissionBanner";
+import Service from "./Service";
 
 const Admission = () => {
     return (
@@ -17,6 +18,9 @@ const Admission = () => {
                     If you would like to study in the university in the heart of the city that focus on chaning the world for better to morrow, you’re choosin the right place. We do not use special formulas to select students. We look at every single applicant’s application, academic and personal, to select students who suit to our community.
                     </div>
                 </div>
+            </div>
+            <div className="">
+                <Service></Service>
             </div>
         </div>
     );
