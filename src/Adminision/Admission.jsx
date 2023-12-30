@@ -7,7 +7,7 @@ const Admission = () => {
   const data = useLoaderData();
   //   console.log(data);
   return (
-    <div>
+    <div className="">
       <AdmissionBanner></AdmissionBanner>
       <div className="my-4 p-8">
         <p className="text-xl text-slate-400">
@@ -49,6 +49,25 @@ const Admission = () => {
             ></Aplication>
           ))}
         </div>
+        <hr className="border border-green-600 w-full my-5" />
+      </div>
+      <div className="flex justify-between items-center gap-5 p-8">
+        <div className="w-1/2">
+            <p className="text-3xl font-bold mb-5">Things To Know First</p>
+            <h2 className="text-lg text-slate-500">The Common Application is required for students applying to any or all of KU’s three degree. You’ll be able to choose your campus and program s that you are interested.</h2>
+            <p className="text-lg text-slate-500 my-8">You will need :</p>
+
+            <li className="text-lg  text-slate-500 mb-4">Contact information for the counselor or other school representative who will complete your Common Application School Report and submit your official high school transcript.</li>
+
+            <li className="text-lg text-slate-500 mb-4">Contact information for one teacher (or two, maximum) who will complete the Teacher Evaluation form.</li>
+
+            <li className="text-lg text-slate-500 mb-4">Nonrefundable $50 application fee. Students who are unable to pay the application fee can request a fee waiver.</li>
+            <div className="flex gap-5">
+                <button className="btn text-lg  text-white bg-green-600 ">Request a campus tour</button>
+                <button className="btn text-lg  text-white bg-green-600 ">Request Information</button>
+            </div>
+        </div>
+        <div className=""></div>
       </div>
     </div>
   );
