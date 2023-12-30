@@ -5,7 +5,7 @@ import Service from "./Service";
 
 const Admission = () => {
   const data = useLoaderData();
-//   console.log(data);
+  //   console.log(data);
   return (
     <div>
       <AdmissionBanner></AdmissionBanner>
@@ -39,13 +39,16 @@ const Admission = () => {
       <div className="">
         <Service></Service>
       </div>
-      <div className="">
-        {data?.map((application) => (
-          <Aplication
-            key={application.title}
-            application={application}
-          ></Aplication>
-        ))}
+      <div className=" p-4">
+        <p className="text-4xl font-bold my-8 ">The Application Process</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 ">
+          {data?.map((application) => (
+            <Aplication
+              key={application.title}
+              application={application}
+            ></Aplication>
+          ))}
+        </div>
       </div>
     </div>
   );
