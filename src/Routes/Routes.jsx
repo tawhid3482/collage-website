@@ -22,7 +22,8 @@ const Routes = createBrowserRouter([
       },
       {
         path:"page",
-        element:<Page></Page>
+        element:<Page></Page>,
+        
       }
     ],
   },

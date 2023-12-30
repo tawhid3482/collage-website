@@ -1,4 +1,5 @@
 import collage from "../assets/University of Toulouse.jpg";
+import PageSer from "./PageSer/PageSer";
 const Page = () => {
   return (
     <div className="mb-8">
@@ -37,6 +38,10 @@ const Page = () => {
           </div>
          
         </div>
+      </div>
+     
+      <div className="">
+        <PageSer></PageSer>
       </div>
     </div>
   );
