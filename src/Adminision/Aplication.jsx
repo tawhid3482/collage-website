@@ -1,5 +1,6 @@
 
-const Aplication = () => {
+const Aplication = ({application}) => {
+    console.log(application)
     return (
         <div>
             

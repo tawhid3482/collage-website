@@ -16,7 +16,8 @@ const Routes = createBrowserRouter([
       },
       {
         path: "admission",
-        element:<Admission></Admission>
+        element:<Admission></Admission>,
+        loader:()=>fetch('/application.json')
       },
     ],
   },
