@@ -51,23 +51,88 @@ const Admission = () => {
         </div>
         <hr className="border border-green-600 w-full my-5" />
       </div>
-      <div className="flex justify-between items-center gap-5 p-8">
+      <div className="flex justify-between items-start gap-10 p-8">
         <div className="w-1/2">
-            <p className="text-3xl font-bold mb-5">Things To Know First</p>
-            <h2 className="text-lg text-slate-500">The Common Application is required for students applying to any or all of KU’s three degree. You’ll be able to choose your campus and program s that you are interested.</h2>
-            <p className="text-lg text-slate-500 my-8">You will need :</p>
+          <p className="text-3xl font-bold mb-5">Things To Know First</p>
+          <h2 className="text-lg text-slate-500">
+            The Common Application is required for students applying to any or
+            all of KU’s three degree. You’ll be able to choose your campus and
+            program s that you are interested.
+          </h2>
+          <p className="text-lg text-slate-500 my-8">You will need :</p>
 
-            <li className="text-lg  text-slate-500 mb-4">Contact information for the counselor or other school representative who will complete your Common Application School Report and submit your official high school transcript.</li>
+          <li className="text-lg  text-slate-500 mb-4">
+            Contact information for the counselor or other school representative
+            who will complete your Common Application School Report and submit
+            your official high school transcript.
+          </li>
 
-            <li className="text-lg text-slate-500 mb-4">Contact information for one teacher (or two, maximum) who will complete the Teacher Evaluation form.</li>
+          <li className="text-lg text-slate-500 mb-4">
+            Contact information for one teacher (or two, maximum) who will
+            complete the Teacher Evaluation form.
+          </li>
 
-            <li className="text-lg text-slate-500 mb-4">Nonrefundable $50 application fee. Students who are unable to pay the application fee can request a fee waiver.</li>
-            <div className="flex gap-5">
-                <button className="btn text-lg  text-white bg-green-600 ">Request a campus tour</button>
-                <button className="btn text-lg  text-white bg-green-600 ">Request Information</button>
-            </div>
+          <li className="text-lg text-slate-500 mb-4">
+            Nonrefundable $50 application fee. Students who are unable to pay
+            the application fee can request a fee waiver.
+          </li>
+          <div className="flex gap-5">
+            <button className="btn text-lg  text-white bg-green-600 ">
+              Request a campus tour
+            </button>
+            <button className="btn text-lg  text-white bg-green-600 ">
+              Request Information
+            </button>
+          </div>
         </div>
-        <div className=""></div>
+        <div className="w-1/2">
+          <p className="text-3xl font-bold mb-5">When To Apply?</p>
+          <div className="overflow-x-auto my-8">
+            <table className="table">
+              {/* head */}
+              <thead className="bg-green-500 text-white text-lg">
+                <tr>
+                  <th></th>
+                  <th>Application Deadline</th>
+                  <th>Decision</th>
+                </tr>
+              </thead>
+              <tbody className="text-lg font-medium">
+                {/* row 1 */}
+                <tr>
+                  <td>Early Decision 1</td>
+                  <td>November 1</td>
+                  <td>December 15</td>
+                </tr>
+                {/* row 2 */}
+                <tr>
+                  <td>Early Decision 2</td>
+                  <td>January 1</td>
+                  <td>February 15</td>
+                </tr>
+                {/* row 3 */}
+                <tr>
+                  <td>Regular Decision</td>
+                  <td>January 1</td>
+                  <td>April 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="">
+            <p className="text-3xl font-bold mb-5">
+              Where to submit necessary documents?
+            </p>
+            <h2 className="text-xl text-slate-500">
+              Documents not submitted through the online method can be mailed
+              to:
+            </h2>
+            <h2 className="text-lg text-slate-500">
+              Box 35300 <br /> 1810 Campus Way NE <br /> Bothell, WA 98011-8246
+              USA
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   );
