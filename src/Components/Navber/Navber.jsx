@@ -12,7 +12,7 @@ const Navber = () => {
   const routes = [
     { path: "/", name: "Home" },
     { path: "/admission", name: "Admission" },
-    { path: "/Contact", name: "Contact" },
+    { path: "/page", name: "Page" },
   ];
 
   return (

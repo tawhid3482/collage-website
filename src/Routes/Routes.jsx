@@ -3,6 +3,7 @@ import MainLayOut from "../Components/LayOut/MainLayOut";
 import Errorpage from "../Components/ErrorPage/Errorpage";
 import Home from "../Components/Home/Home";
 import Admission from "../Adminision/Admission";
+import Page from "../Page/Page";
 
 const Routes = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const Routes = createBrowserRouter([
         element:<Admission></Admission>,
         loader:()=>fetch('/application.json')
       },
+      {
+        path:"page",
+        element:<Page></Page>
+      }
     ],
   },
 ]);
