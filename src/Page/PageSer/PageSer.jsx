@@ -1,6 +1,8 @@
+import UsePage from "../../Hooks/UsePage";
 import PageService from "./PageService";
 
 const PageSer = () => {
+    const [services]=UsePage()
   return (
     <div>
       <div
@@ -13,7 +15,7 @@ const PageSer = () => {
         <div className="hero-overlay bg-opacity-60"></div>
             <div className="">
                 {
-                    data.map((data)=><PageService key={}></PageService>)
+                    services.map((service)=><PageService key={service.title} service={service}> </PageService>)
                 }
             </div>
       </div>
