@@ -1,5 +1,6 @@
 
-const PageService = () => {
+const PageService = ({service}) => {
+    console.log(service)
     return (
         <div>
             

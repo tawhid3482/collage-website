@@ -15,7 +15,7 @@ const PageSer = () => {
         <div className="hero-overlay bg-opacity-60"></div>
             <div className="">
                 {
-                    services.map((service)=><PageService key={service.title} service={service}> </PageService>)
+                    services?.map((service)=><PageService key={service.title} service={service}> </PageService>)
                 }
             </div>
       </div>
