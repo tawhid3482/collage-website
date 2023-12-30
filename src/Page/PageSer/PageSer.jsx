@@ -13,7 +13,7 @@ const PageSer = () => {
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
-            <div className="">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
                     services?.map((service)=><PageService key={service.title} service={service}> </PageService>)
                 }
