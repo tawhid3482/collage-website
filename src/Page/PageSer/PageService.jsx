@@ -1,5 +1,4 @@
 const PageService = ({ service }) => {
-  // console.log(service)
   const { img, title, name } = service;
   return (
     <div className="p-4">
