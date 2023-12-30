@@ -17,7 +17,7 @@ const Page = () => {
         </p>
         <div className=" flex-col lg:flex-row flex justify-between items-start  p-5 ">
           <div className="mb-3">
-            <p className="text-4xl font-bold mb-3">Kingster’s History</p>
+            <p className="text-4xl font-bold mb-3">SPI History</p>
             <hr className="border-2 border-green-500" />
           </div>
           <div className="lg:w-1/3 text-lg mb-3">

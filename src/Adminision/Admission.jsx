@@ -12,13 +12,13 @@ const Admission = () => {
       <div className="my-4 p-8">
         <p className="text-xl text-slate-400">
           {" "}
-          Home {">"} <span className="text-green-600">Apply To Kingster</span>
+          Home {">"} <span className="text-green-600">Apply To SPI</span>
         </p>
       </div>
       <div className="mt-10 p-8">
         <h2 className="text-3xl font-bold mb-4">Detail About How To Apply</h2>
-        <div className="flex justify-between  ">
-          <div className="w-[550px] text-lg">
+        <div className="flex-col md:flex-row flex justify-between gap-6 ">
+          <div className="md:w-[550px] text-lg">
             If you would like to study in the university in the heart of the
             city that focus on chaning the world for better to morrow, you’re
             choosin the right place. We do not use special formulas to select
@@ -27,7 +27,7 @@ const Admission = () => {
             full range of backgrounds. If you would like to study in the
             university in the heart of the city.
           </div>
-          <div className="w-[550px] text-lg">
+          <div className="md:w-[550px] text-lg">
             If you would like to study in the university in the heart of the
             city that focus on chaning the world for better to morrow, you’re
             choosin the right place. We do not use special formulas to select
@@ -51,8 +51,8 @@ const Admission = () => {
         </div>
         <hr className="border border-green-600 w-full my-5" />
       </div>
-      <div className="flex justify-between items-start gap-10 p-8">
-        <div className="w-1/2">
+      <div className="flex-col md:flex-row flex justify-between items-start gap-10 md:p-8">
+        <div className="md:w-1/2">
           <p className="text-3xl font-bold mb-5">Things To Know First</p>
           <h2 className="text-lg text-slate-500">
             The Common Application is required for students applying to any or
@@ -61,7 +61,7 @@ const Admission = () => {
           </h2>
           <p className="text-lg text-slate-500 my-8">You will need :</p>
 
-          <li className="text-lg  text-slate-500 mb-4">
+          <li className="text-lg text-slate-500 mb-4">
             Contact information for the counselor or other school representative
             who will complete your Common Application School Report and submit
             your official high school transcript.
@@ -76,18 +76,18 @@ const Admission = () => {
             Nonrefundable $50 application fee. Students who are unable to pay
             the application fee can request a fee waiver.
           </li>
-          <div className="flex gap-5">
-            <button className="btn text-lg  text-white bg-green-600 ">
+          <div className="flex-col lg:flex-row flex gap-5 ">
+            <button className="btn text-lg text-white bg-green-600 ">
               Request a campus tour
             </button>
-            <button className="btn text-lg  text-white bg-green-600 ">
+            <button className="btn text-lg text-white bg-green-600 ">
               Request Information
             </button>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full p-3 md:w-1/2">
           <p className="text-3xl font-bold mb-5">When To Apply?</p>
-          <div className="overflow-x-auto my-8">
+          <div className="w-4/5 md:w-full overflow-x-auto my-8">
             <table className="table">
               {/* head */}
               <thead className="bg-green-500 text-white text-lg">
@@ -127,7 +127,7 @@ const Admission = () => {
               Documents not submitted through the online method can be mailed
               to:
             </h2>
-            <h2 className="text-lg text-slate-500">
+            <h2 className="md:text-lg text-slate-500">
               Box 35300 <br /> 1810 Campus Way NE <br /> Bothell, WA 98011-8246
               USA
             </h2>
