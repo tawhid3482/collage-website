@@ -1,16 +1,34 @@
 import { useLoaderData } from "react-router-dom";
-import Course from "../Components/Course/Course";
+import Course from "./Course";
 
 const Courses = () => {
-    const data = useLoaderData()
-    console.log(data)
-    return (
-        <div>
-            {
-                data?.map((course)=><Course key={course.name} course={course}></Course>)
-            }
+  const data = useLoaderData();
+  console.log(data);
+  return (
+    <div className="p-8">
+      <div className="space-y-4">
+        <br />
+        <br />
+        
+        
+        <p className="text-xl ">Find course that suit you</p>
+        <p className="text-4xl md:text-5xl font-bold ">Course Search</p>
+        <p className="text-lg">Home  {">"} <span className="text-green-500">Course Search</span></p>
+      </div>
+      <div className="flex justify-between items-center gap-5 my-8">
+        <div className="lg:w-1/3 border border-green-600">
+        <p className="text-xl ">Search For Courses</p>
+
         </div>
-    );
+        <div className="lg:w-2/3 border border-green-600">
+        {data?.map((course) => (
+          <Course key={course.name} course={course}></Course>
+        ))}
+      </div>
+      </div>
+      
+    </div>
+  );
 };
 
 export default Courses;

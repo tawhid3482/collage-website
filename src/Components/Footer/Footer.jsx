@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/collage-removebg-preview.png";
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-5">
       <footer className="footer p-10 bg-base-200 text-base-content">
         <aside>
           <img src={logo} className="w-40 h-24" alt="" />

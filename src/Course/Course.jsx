@@ -1,9 +1,9 @@
 
 const Course = ({course}) => {
-    console.log(course)
+    // console.log(course)
     return (
-        <div>
-            
+        <div className="">
+           
         </div>
     );
 };
