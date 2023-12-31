@@ -4,6 +4,7 @@ import Errorpage from "../Components/ErrorPage/Errorpage";
 import Home from "../Components/Home/Home";
 import Admission from "../Adminision/Admission";
 import Page from "../Page/Page";
+import Courses from "../Course/Courses";
 
 const Routes = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const Routes = createBrowserRouter([
       },
       {
         path:"course",
-        element:
+        element:<Courses></Courses>
       }
     ],
   },
