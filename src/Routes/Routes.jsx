@@ -23,7 +23,10 @@ const Routes = createBrowserRouter([
       {
         path:"page",
         element:<Page></Page>,
-        
+      },
+      {
+        path:"course",
+        element:
       }
     ],
   },
