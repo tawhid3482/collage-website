@@ -16,11 +16,11 @@ const Courses = () => {
         <p className="text-lg">Home  {">"} <span className="text-green-500">Course Search</span></p>
       </div>
       <div className="flex justify-between items-center gap-5 my-8">
-        <div className="lg:w-1/3 border border-green-600">
-        <p className="text-xl ">Search For Courses</p>
+        <div className="lg:w-1/3 border border-green-600 p-4">
+        <p className="text-2xl font-bold">Search For Courses</p>
 
         </div>
-        <div className="lg:w-2/3 border border-green-600">
+        <div className="lg:w-2/3 border border-green-600 p-4">
         {data?.map((course) => (
           <Course key={course.name} course={course}></Course>
         ))}
