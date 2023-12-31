@@ -3,7 +3,7 @@ const Course = ({course}) => {
     const {courseId,name,Department , Campus ,Level,Instructor,Semester,Credit,Method }= course
 console.log(name)
     return (
-        <div className="bg-green-200 p-8">
+        <div className="bg-gray-100 p-8">
            <p className="text-xl font-bold text-green-500 my-5" >{courseId} <span className="text-black">{name}</span></p>
 
            <p className="text-xl font-bold " > Department : <span className="text-lg font-normal">{Department}</span></p>
@@ -16,7 +16,9 @@ console.log(name)
            <p className="text-xl font-bold " > Semester : <span className="text-lg font-normal">{Semester}</span></p>
            <p className="text-xl font-bold " > Credit : <span className="text-lg font-normal">{Credit}</span></p>
            <p className="text-xl font-bold " > Method : <span className="text-lg font-normal">{Method}</span></p>
-           
+           <div className="">
+            <button className="btn bg-green-500 text-white my-2">More Details</button>
+           </div>
         </div>
     );
 };
