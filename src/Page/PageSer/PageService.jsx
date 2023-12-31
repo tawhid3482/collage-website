@@ -1,4 +1,3 @@
-// saikaet
 const PageService = ({ service }) => {
   const { img, title, name } = service;
   return (
