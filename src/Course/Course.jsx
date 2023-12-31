@@ -1,9 +1,9 @@
 
 const Course = ({course}) => {
-    // console.log(course)
-    const {courseId,name,Department , Campus ,Level,Instructor ,Semester ,Credit ,Method }= course
+    const {courseId,name,Department , Campus ,Level,Instructor,Semester,Credit,Method }= course
+console.log(Method)
     return (
-        <div className="">
+        <div className="bg-green-200 p-8">
            <p className="text-xl font-bold text-green-500 my-5" >{courseId} <span className="text-black">{name}</span></p>
 
            <p className="text-xl font-bold " > Department : <span className="text-lg font-normal">{Department}</span></p>
