@@ -1,7 +1,7 @@
 
 const Course = ({course}) => {
     const {courseId,name,Department , Campus ,Level,Instructor,Semester,Credit,Method }= course
-console.log(Method)
+console.log(name)
     return (
         <div className="bg-green-200 p-8">
            <p className="text-xl font-bold text-green-500 my-5" >{courseId} <span className="text-black">{name}</span></p>
