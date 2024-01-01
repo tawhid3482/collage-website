@@ -5,6 +5,7 @@ import Home from "../Components/Home/Home";
 import Admission from "../Adminision/Admission";
 import Page from "../Page/Page";
 import Courses from "../Course/Courses";
+import CourseDetails from "../Course/CourseDetails";
 
 const Routes = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const Routes = createBrowserRouter([
         path:"course",
         element:<Courses></Courses>,
         loader:()=>fetch('/course.json')
+      },
+      {
+        path:"courseDetails",
+        element:<CourseDetails></CourseDetails>,
+        
       }
     ],
   },

@@ -2,7 +2,7 @@
 const CourseDetails = () => {
     return (
         <div>
-            
+            hi
         </div>
     );
 };
