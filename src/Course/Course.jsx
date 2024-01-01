@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Course = ({course}) => {
-    const {courseId,name,Department , Campus ,Level,Instructor,Semester,Credit,Method }= course
+    const {id,name,Department , Campus ,Level,Instructor,Semester,Credit,Method }= course
 console.log(name)
     return (
         <div className="bg-gray-100 p-8">
-           <p className="text-xl font-bold text-green-500 my-5" >{courseId} <span className="text-black">{name}</span></p>
+           <p className="text-xl font-bold text-green-500 my-5" >{id} <span className="text-black">{name}</span></p>
 
            <p className="text-xl font-bold " > Department : <span className="text-lg font-normal">{Department}</span></p>
 
@@ -18,7 +18,7 @@ console.log(name)
            <p className="text-xl font-bold " > Credit : <span className="text-lg font-normal">{Credit}</span></p>
            <p className="text-xl font-bold " > Method : <span className="text-lg font-normal">{Method}</span></p>
            <div className="">
-           <Link to='/courseDetails'> <button className="btn bg-green-500 text-white my-2">More Details</button>
+           <Link to={`/course/${id}`}> <button className="btn bg-green-500 text-white my-2">More Details</button>
            </Link>
            </div>
         </div>
