@@ -18,7 +18,8 @@ console.log(name)
            <p className="text-xl font-bold " > Credit : <span className="text-lg font-normal">{Credit}</span></p>
            <p className="text-xl font-bold " > Method : <span className="text-lg font-normal">{Method}</span></p>
            <div className="">
-           <Link to='/courseDetails'> <button className="btn bg-green-500 text-white my-2">More Details</button></Link>
+           <Link to='/courseDetails'> <button className="btn bg-green-500 text-white my-2">More Details</button>
+           </Link>
            </div>
         </div>
     );
