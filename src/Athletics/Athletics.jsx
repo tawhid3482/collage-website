@@ -42,12 +42,14 @@ const Athletics = () => {
       </div>
       <p className="text-lg text-green-500 ml-1">Read All News</p>
       <div className="flex justify-between items-start my-8 w-1/3">
-        <div className="">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTavZYhYHiG6xw81kf49kan9xK0qALB7UaLRA&usqp=CAU" alt="" className="md:w-96" />
+        <div className="group">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTavZYhYHiG6xw81kf49kan9xK0qALB7UaLRA&usqp=CAU" alt="" className="md:w-96 duration-300 group-hover:scale-110" />
         <p className=" text-slate-500 my-2 mt-8" >JUNE 6, / 2016ADMISSION, STUDENT</p>
         <p className="text-2xl font-bold hover:text-green-500" >Professor Albert joint research on mobile money in Tanzania</p>
         </div>
-        <div className=""></div>
+        <div className="">
+
+        </div>
         <div className=""></div>
 
       </div>
