@@ -6,6 +6,7 @@ const Athletics = () => {
             <div className="">
                 <Baner img={athletics} title1={'Go For KU Team!'} title2={'Athletics'}></Baner>
             </div>
+            
         </div>
     );
 };

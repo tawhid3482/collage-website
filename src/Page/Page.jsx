@@ -1,4 +1,5 @@
 import Baner from "../Components/Shayed/Baner";
+import Subtitle from "../Components/Shayed/Subtitle";
 import collage from "../assets/University of Toulouse.jpg";
 import PageSer from "./PageSer/PageSer";
 const Page = () => {
@@ -8,9 +9,7 @@ const Page = () => {
       <Baner img={collage} title1={'Know Us Better'} title2={'About Us'}></Baner>
 
       <div className=" ">
-        <p className="text-lg text-slate-500 mb-7">
-          Home {">"} <span className="text-green-600">About Us</span>
-        </p>
+       <Subtitle sub={'Home'} title={'About us'}></Subtitle>
         <div className=" flex-col lg:flex-row flex justify-between items-start  p-5 ">
           <div className="mb-3">
             <p className="text-4xl font-bold mb-3">SPI History</p>
