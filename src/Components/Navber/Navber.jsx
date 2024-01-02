@@ -14,6 +14,7 @@ const Navber = () => {
     { path: "/admission", name: "Admission" },
     { path: "/page", name: "Page" },
     { path: "/course", name: "Course" },
+    { path: "/athletics", name: "Athletics" },
   ];
 
   return (
