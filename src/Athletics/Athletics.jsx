@@ -43,12 +43,12 @@ const Athletics = () => {
         <hr className="border border-gray-400 w-32" />
       </div>
       <p className="text-lg text-green-500 ml-1">Read All News</p>
-      <div className="flex justify-between items-start gap-7 my-8 ">
-        <div className=" relative overflow-hidden group lg:w-1/3">
+      <div className= " flex-col lg:flex-row lg:flex justify-between items-start gap-7 my-8 ">
+        <div className=" my-8 lg:my-0 relative overflow-hidden group lg:w-1/3">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTavZYhYHiG6xw81kf49kan9xK0qALB7UaLRA&usqp=CAU"
             alt=""
-            className="md:w-96 duration-300 group-hover:scale-110"
+            className="w-full lg:w-96 duration-300 group-hover:scale-110"
           />
           <p className=" text-slate-500 my-2 mt-8">
             JUNE 6, / 2016ADMISSION, STUDENT
@@ -58,7 +58,7 @@ const Athletics = () => {
           </p>
         </div>
 
-        <div className="lg:w-1/3 ">
+        <div className="my-8 lg:my-0 lg:w-1/3 ">
           <div className="flex gap-5  relative overflow-hidden group">
             <img
               src="https://www.ringcentral.com/gb/en/blog/wp-content/uploads/2021/05/happy-manager-leads-a-meeting-in-the-office-scaled.jpg"
@@ -100,7 +100,7 @@ const Athletics = () => {
           </div>
         </div>
 
-        <div className="lg:w-1/3 p-1">
+        <div className=" lg:w-1/3 p-1">
           <div className=" flex items-center gap-5">
            <div className="">
            <p className="text-2xl text-green-500 font-bold">17 <br /> DEC</p>
@@ -178,6 +178,7 @@ const Athletics = () => {
           </div>
         </div>
       </div>
+    
       <div className="flex justify-end  mr-14">
         <button className="btn uppercase hover:bg-green-500 hover:text-white">view all events <FaArrowCircleRight className="text-2xl"></FaArrowCircleRight> </button> 
       </div>
