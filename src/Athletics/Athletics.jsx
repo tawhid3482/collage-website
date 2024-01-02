@@ -2,6 +2,8 @@ import { FaArrowCircleRight, FaClock, FaLocationArrow } from "react-icons/fa";
 import Baner from "../Components/Shayed/Baner";
 import Subtitle from "../Components/Shayed/Subtitle";
 import athletics from "../assets/sports.jpg";
+import Banner from "./Banner";
+import Sponser from "../Components/Sponser/Sponser";
 const Athletics = () => {
   return (
     <div className="p-7">
@@ -178,6 +180,12 @@ const Athletics = () => {
       </div>
       <div className="flex justify-end  mr-14">
         <button className="btn uppercase hover:bg-green-500 hover:text-white">view all events <FaArrowCircleRight className="text-2xl"></FaArrowCircleRight> </button> 
+      </div>
+      <div className="">
+        <Banner></Banner>
+      </div>
+      <div className="">
+       <Sponser></Sponser>
       </div>
     </div>
   );
