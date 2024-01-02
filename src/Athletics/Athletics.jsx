@@ -1,4 +1,4 @@
-import { FaClock, FaLocationArrow } from "react-icons/fa";
+import { FaArrowCircleRight, FaClock, FaLocationArrow } from "react-icons/fa";
 import Baner from "../Components/Shayed/Baner";
 import Subtitle from "../Components/Shayed/Subtitle";
 import athletics from "../assets/sports.jpg";
@@ -98,7 +98,7 @@ const Athletics = () => {
           </div>
         </div>
 
-        <div className="lg:w-1/3 border border-r-emerald-400 p-1">
+        <div className="lg:w-1/3 p-1">
           <div className=" flex items-center gap-5">
            <div className="">
            <p className="text-2xl text-green-500 font-bold">17 <br /> DEC</p>
@@ -175,6 +175,9 @@ const Athletics = () => {
            </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-end  mr-14">
+        <button className="btn uppercase hover:bg-green-500 hover:text-white">view all events <FaArrowCircleRight className="text-2xl"></FaArrowCircleRight> </button> 
       </div>
     </div>
   );
