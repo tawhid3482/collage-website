@@ -1,3 +1,4 @@
+import { FaClock, FaLocationArrow } from "react-icons/fa";
 import Baner from "../Components/Shayed/Baner";
 import Subtitle from "../Components/Shayed/Subtitle";
 import athletics from "../assets/sports.jpg";
@@ -111,8 +112,65 @@ const Athletics = () => {
             <p className="">
               Professor Albert joint research on mobile money in Tanzania
             </p>
-            <div className="">
-                
+            <div className="flex items-center gap-3 ">
+               <div className="text-green-500 flex  items-center gap-3">
+                    <FaClock></FaClock>
+                <p>1:00 pm - 1:00 pm</p>
+               </div>
+               <div className="text-green-500 flex items-center gap-2">
+                    <FaLocationArrow></FaLocationArrow>
+                <p>Kingster Grand Hall</p>
+               </div>
+            </div>
+           </div>
+          </div>
+          <div className=" flex items-center gap-5 my-5">
+           <div className="">
+           <p className="text-2xl text-green-500 font-bold">27 <br /> DEC</p>
+            <hr className="border-2 border-green-500 w-12" />
+           </div>
+           <div className="">
+           <p className=" text-2xl font-bold hover:text-green-500 ">
+           Sport Management Information Webinar
+
+            </p>
+            <p className="">
+              Professor Albert joint research on mobile money in Tanzania
+            </p>
+            <div className="flex items-center gap-3 ">
+               <div className="text-green-500 flex  items-center gap-3">
+                    <FaClock></FaClock>
+                <p>1:00 pm - 1:00 pm</p>
+               </div>
+               <div className="text-green-500 flex items-center gap-2">
+                    <FaLocationArrow></FaLocationArrow>
+                <p>Kingster Grand Hall</p>
+               </div>
+            </div>
+           </div>
+          </div>
+          <div className=" flex items-center gap-5">
+           <div className="">
+           <p className="text-2xl text-green-500 font-bold">05 <br /> DEC</p>
+            <hr className="border-2 border-green-500 w-12" />
+           </div>
+           <div className="">
+           <p className=" text-2xl font-bold hover:text-green-500 ">
+           Planning and Facilitating Effective Meetings
+
+            </p>
+            <p className="">
+              Professor Albert joint research on mobile money in Tanzania
+            </p>
+            <div className="flex items-center gap-3 ">
+               <div className="text-green-500 flex  items-center gap-3">
+                    <FaClock></FaClock>
+                <p>1:00 pm - 1:00 pm</p>
+               </div>
+               <div className="text-green-500 flex items-center gap-2">
+                    <FaLocationArrow></FaLocationArrow>
+                <p>Kingster Grand Hall</p>
+               </div>
             </div>
            </div>
           </div>
