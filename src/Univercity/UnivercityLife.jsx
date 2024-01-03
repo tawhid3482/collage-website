@@ -1,8 +1,9 @@
+import Banner from "./Banner";
 
 const UnivercityLife = () => {
     return (
-        <div>
-            
+        <div className="p-6">
+            <Banner></Banner>
         </div>
     );
 };

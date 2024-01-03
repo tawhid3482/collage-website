@@ -7,6 +7,7 @@ import Page from "../Page/Page";
 import Courses from "../Course/Courses";
 import CourseDetails from "../Course/CourseDetails";
 import Athletics from "../Athletics/Athletics";
+import UnivercityLife from "../Univercity/UnivercityLife";
 
 const Routes = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const Routes = createBrowserRouter([
       {
         path:"athletics",
         element:<Athletics></Athletics>,
+      },
+      {
+        path:"univercity",
+        element:<UnivercityLife></UnivercityLife>,
       }
     ],
   },
