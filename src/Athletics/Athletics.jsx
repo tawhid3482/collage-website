@@ -191,4 +191,4 @@ const Athletics = () => {
     </div>
   );
 };
-export default Athletics
+export default Athletics;
