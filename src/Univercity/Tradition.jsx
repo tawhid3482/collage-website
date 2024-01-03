@@ -1,10 +1,11 @@
-import { FaBus, FaCar, FaStarOfLife,  } from "react-icons/fa";
+import { FaBus, FaCar,   } from "react-icons/fa";
+import { GiLifeSupport   } from "react-icons/gi";
 
 const Tradition = () => {
   return (
     <div className="">
       <div className="flex justify-between items-center gap-8">
-        <div className="space-y-3 lg:w-1/2">
+        <div className="space-y-3 lg:w-1/2 p-4">
           <p className="text-3xl font-bold">Event and Traditions</p>
           <p className="text-xl text-green-500 font-medium">
             Far far away, behind the word mountains, far from the countries
@@ -20,8 +21,8 @@ const Tradition = () => {
             className="border-2 border-green-500 
            my-5"
           />
-          <div className="bg-green-500 p-5 text-white">
-            <FaStarOfLife></FaStarOfLife>
+          <div className="bg-green-500 p-10 text-white">
+            <GiLifeSupport className="text-8xl " />
            <p className="text-2xl font-bold "> Social Life </p>
           <div className="">
           Bookmarksgrove right at the coast of the Semantics, a
