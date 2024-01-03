@@ -183,7 +183,7 @@ const Athletics = () => {
         <button className="btn uppercase hover:bg-green-500 hover:text-white">view all events <FaArrowCircleRight className="text-2xl"></FaArrowCircleRight> </button> 
       </div>
       <div className="">
-        <Banner></Banner>
+        <Banner img={'https://eliteclubs.com/wp-content/uploads/2019/11/The-Pros-Cons-of-Exercising-with-a-Friend-e1571837163735.jpeg'} title={'Our goal is to be at the heart of the financial services industry as businesses expand across.'} subTitle={'John SmithCEO / Of Financity'}></Banner>
       </div>
       <div className="">
        <Sponser></Sponser>
