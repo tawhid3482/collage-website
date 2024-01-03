@@ -39,7 +39,7 @@ const Routes = createBrowserRouter([
       },
       {
         path:"athletics",
-        element:<Athletics></Athletics>
+        element:<Athletics></Athletics>,
       }
     ],
   },
