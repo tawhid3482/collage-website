@@ -1,13 +1,13 @@
 const Banner = () => {
   return (
     <div>
-      <div className=" w-full">
+      <div className="w-full">
         <img
           src="https://www.usnews.com/object/image/00000189-da73-d234-afff-ff772a960000/gettyimages-1414982113.jpg?update-time=1691587242372&size=responsive640"
-          className="w-full max-h-screen bg-opacity-15 "
+          className="w-full max-h-screen  "
           alt=""
         />
-        <div className="flex justify-between items-start gap-20 relative bottom-40 p-4  text-white" >
+        <div className="flex  justify-between items-start gap-20 relative bottom-40 p-4  text-white" >
           <div className="">
           <p className="text-5xl font-bold">University Life</p>
           <hr className="border-2 border-green-500 w-96 my-5" />
