@@ -17,15 +17,15 @@ const Courses = () => {
         </p>
       </div>
       <div className="flex justify-between  gap-5 my-8">
-        <div className="lg:w-1/3 border border-green-600 p-6 text-white bg-black">
-          <p className="text-2xl font-bold">Search For Courses</p>
+        <div className="lg:w-1/3 border border-green-600 p-6 text-white bg-black  flex-col flex items-center justify-center">
+          <p className="text-4xl font-bold">Search Your Courses</p>
           <div className="bg">
             <input
               type="text"
               placeholder="Course Id"
-              className="my-5 p-2 bg-gray-500 text-lg w-4/5"
+              className="my-5 p-2 bg-gray-500 text-lg w-full"
             />
-            <div className="text-white bg-gray-500 w-4/5">
+            <div className="text-white bg-gray-500 w-full">
               <select
                 className="text-white bg-gray-500 p-3 w-full"
                 name=""
@@ -66,7 +66,7 @@ const Courses = () => {
                 </option>
               </select>
             </div>
-            <div className="text-white bg-gray-500 w-4/5 my-5">
+            <div className="text-white bg-gray-500 w-full my-5">
               <select
                 className="text-white bg-gray-500 p-3 w-full"
                 name=""
@@ -90,7 +90,7 @@ const Courses = () => {
               
               </select>
             </div>
-            <div className="text-center mr-20">
+            <div className="text-center ">
               <button className="btn text-white bg-green-500">Search </button>
             </div>
           </div>
