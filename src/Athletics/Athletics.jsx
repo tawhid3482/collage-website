@@ -4,6 +4,7 @@ import Subtitle from "../Components/Shayed/Subtitle";
 import athletics from "../assets/sports.jpg";
 import Banner from "./Banner";
 import Sponser from "../Components/Sponser/Sponser";
+import Participate from "./Participate";
 const Athletics = () => {
   return (
     <div className="p-7">
@@ -187,6 +188,9 @@ const Athletics = () => {
       </div>
       <div className="">
        <Sponser></Sponser>
+      </div>
+      <div className="">
+        <Participate></Participate>
       </div>
     </div>
   );
