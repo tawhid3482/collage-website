@@ -45,6 +45,7 @@ const Routes = createBrowserRouter([
       {
         path:"univercity",
         element:<UnivercityLife></UnivercityLife>,
+        loader:()=>fetch('/unilife.json')
       }
     ],
   },

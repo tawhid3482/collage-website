@@ -1,0 +1,20 @@
+[
+    {
+        "id":"01",
+        "name":"Dining On Campus",
+        "img":"https://images.livemint.com/img/2020/12/01/1140x641/Dining_pandemic_work_1606805288938_1606805308876.jpg",
+        "description":"Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth."
+    },
+    {
+        "id":"02",
+        "name":"Dining On Campus",
+        "img":"https://images.livemint.com/img/2020/12/01/1140x641/Dining_pandemic_work_1606805288938_1606805308876.jpg",
+        "description":"Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth."
+    },
+    {
+        "id":"03",
+        "name":"Dining On Campus",
+        "img":"https://images.livemint.com/img/2020/12/01/1140x641/Dining_pandemic_work_1606805288938_1606805308876.jpg",
+        "description":"Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth."
+    }
+]

@@ -10,9 +10,9 @@ const Experience = () => {
       >
         <div className="hero-overlay  bg-opacity-60"></div>
         <div className=" text-white p-8">
-          <div className="flex justify-between items-start gap-6">
+          <div className="flex-col md:flex-row lg:flex justify-between items-start gap-6">
             <div className="text-3xl font-bold w-full"><p>The Campus Experience</p></div>
-            <div className="text-xl font-semibold">
+            <div className="lg:text-xl md:font-semibold">
               Kingster University was established by John Smith in 1920 for the
               public benefit and it is recognized globally. Throughout our great
               history, Kingster has offered access to a wide range of academic
