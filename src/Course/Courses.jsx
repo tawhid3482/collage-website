@@ -91,7 +91,7 @@ const Courses = () => {
               </select>
             </div>
             <div className="text-center ">
-              <button className="btn text-white bg-green-500">Search </button>
+              <button className="btn text-lg text-white bg-green-500">Search </button>
             </div>
           </div>
         </div>
