@@ -22,7 +22,7 @@ const Navber = () => {
     <nav className=" fixed w-full z-30 flex justify-between items-center md:justify-center md:items-center md:text-black p-1 bg-base-200">
       <div className="">
         {/* <p className="text-3xl font-bold">SPI</p> */}
-        <div className="hidden dropdown">
+        {/* <div className="hidden dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               {user?.photoURL ? (
@@ -61,7 +61,7 @@ const Navber = () => {
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <div className="">
         <div
@@ -77,10 +77,10 @@ const Navber = () => {
       </div>
       <ul
         className={` md:flex md:justify-center rounded-md w-40  md:w-full duration-1000 absolute left-0 md:static bg-base-200 text-black p-4
-      ${openMenu ? "top-16" : "-top-60"}
+      ${openMenu ? "top-16" : "-top-72"}
       `}
       >
-        {routes.map((route) => (
+        {routes?.map((route) => (
           <NavRoutes key={route.path} route={route}></NavRoutes>
         ))}
       </ul>
