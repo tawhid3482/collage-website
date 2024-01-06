@@ -1,6 +1,7 @@
 import Baner from "../Components/Shayed/Baner";
 import Subtitle from "../Components/Shayed/Subtitle";
 import collage from "../assets/University of Toulouse.jpg";
+import Banner from "./Banner";
 import PageSer from "./PageSer/PageSer";
 const Page = () => {
   return (
@@ -36,6 +37,9 @@ const Page = () => {
      
       <div className="">
         <PageSer></PageSer>
+      </div>
+      <div className="">
+        <Banner></Banner>
       </div>
     </div>
   );
