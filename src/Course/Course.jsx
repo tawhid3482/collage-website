@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const Course = ({course}) => {
     const {id,name,Department , Campus ,Level,Instructor,Semester,Credit,Method }= course
-console.log(name)
     return (
         <div className="bg-gray-100 p-8">
            <p className="text-xl font-bold text-green-500 my-5" >{id} <span className="text-black">{name}</span></p>

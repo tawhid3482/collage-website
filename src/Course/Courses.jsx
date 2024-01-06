@@ -3,7 +3,6 @@ import Course from "./Course";
 
 const Courses = () => {
   const data = useLoaderData();
-  console.log(data);
   return (
     <div className="p-8">
       <div className="space-y-4">
@@ -105,4 +104,4 @@ const Courses = () => {
   );
 };
 
-export default Courses
+export default Courses;
