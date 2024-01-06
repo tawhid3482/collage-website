@@ -27,7 +27,7 @@ const CourseDetailsShow = ({ course }) => {
         <h2 className="text-5xl font-bold">{name}</h2>
         <p className="text-lg my-3">
           Home {">"} Accounting Required Courses {">"}{" "}
-          <span className="text-green-500">{name}</span>
+          <span className="text-green-500">{Department}</span>
         </p>
       </div>
       <div className="my-10">
