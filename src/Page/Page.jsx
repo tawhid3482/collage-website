@@ -1,5 +1,6 @@
 import Baner from "../Components/Shayed/Baner";
 import Subtitle from "../Components/Shayed/Subtitle";
+import Sponser from "../Components/Sponser/Sponser";
 import collage from "../assets/University of Toulouse.jpg";
 import Banner from "./Banner";
 import PageSer from "./PageSer/PageSer";
@@ -40,6 +41,9 @@ const Page = () => {
       </div>
       <div className="">
         <Banner></Banner>
+      </div>
+      <div className="">
+        <Sponser></Sponser>
       </div>
     </div>
   );
