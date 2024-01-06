@@ -31,7 +31,7 @@ const CourseDetailsShow = ({ course }) => {
         </p>
       </div>
       <div className="my-10">
-        <div className="flex gap-5">
+        <div className="flex-col md:flex-row md:flex gap-5">
           <div className="lg:w-1/3">
             <img src={img1} className="w-96" alt="" />
           </div>
@@ -94,11 +94,11 @@ const CourseDetailsShow = ({ course }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center gap-8 bg-slate-800 text-white p-6 rounded-xl">
-        <div className="md:w-1/2">
+      <div className="flex-col md:flex-row md:flex justify-between items-center gap-8 bg-slate-800 text-white p-6 rounded-xl">
+        <div className="w-full md:w-1/2">
           <img src={img2} className="w-full" alt="" />
         </div>
-        <div className="md:w-1/2 space-y-5">
+        <div className="md:w-1/2 space-y-5 my-8 md:my-0">
           <p className="text-3xl font-bold">
             The PLP in Drafting Legislation, Regulation, and Policy has been
             offered by the Institute of Advanced Legal Studies with considerable
