@@ -12,7 +12,7 @@ const Courses = () => {
         <p className="text-xl ">Find course that suit you</p>
         <p className="text-4xl md:text-5xl font-bold ">Course Search</p>
         <p className="text-lg">
-          Home {">"} <span className="text-green-500">Course Search</span>
+          Home {">"} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">Course Search</span>
         </p>
       </div>
       <div className="flex-col md:flex-row md:flex justify-between  gap-5 my-8">
@@ -90,7 +90,7 @@ const Courses = () => {
               </select>
             </div>
             <div className="text-center ">
-              <button className="btn text-lg text-white bg-green-500">Search </button>
+              <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600">Search </button>
             </div>
           </div>
         </div>

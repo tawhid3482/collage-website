@@ -77,10 +77,10 @@ const Admission = () => {
             the application fee can request a fee waiver.
           </li>
           <div className="flex-col lg:flex-row flex gap-5 ">
-            <button className="btn text-lg text-white bg-green-600 ">
+            <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
               Request a campus tour
             </button>
-            <button className="btn text-lg text-white bg-green-600 ">
+            <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
               Request Information
             </button>
           </div>
@@ -90,7 +90,7 @@ const Admission = () => {
           <div className="w-4/5 md:w-full overflow-x-auto my-8">
             <table className="table">
               {/* head */}
-              <thead className="bg-green-500 text-white text-lg">
+              <thead className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg">
                 <tr>
                   <th></th>
                   <th>Application Deadline</th>

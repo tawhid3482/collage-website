@@ -7,7 +7,7 @@ const Aplication = ({application}) => {
             
             <div className="flex justify-start gap-5 p-4 ">
                 <div className="">
-                    <h2 className="text-7xl font-bold text-green-500">{num}</h2>
+                    <h2 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">{num}</h2>
                 </div>
                 <div className="">
                     <p className="text-xl font-bold mb-5">{title}</p>

@@ -15,7 +15,7 @@ const Page = () => {
         <div className=" flex-col lg:flex-row flex justify-between items-start  p-5 ">
           <div className="mb-3">
             <p className="text-4xl font-bold mb-3">SPI History</p>
-            <hr className="border-2 border-green-500" />
+            <hr className="border-2 border-purple-500" />
           </div>
           <div className="lg:w-1/3 text-lg mb-3">
             If you would like to study in the university in the heart of the

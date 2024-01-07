@@ -27,7 +27,7 @@ const CourseDetailsShow = ({ course }) => {
         <h2 className="text-5xl font-bold">{name}</h2>
         <p className="text-lg my-3">
           Home {">"} Accounting Required Courses {">"}{" "}
-          <span className="text-green-500">{Department}</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">{Department}</span>
         </p>
       </div>
       <div className="my-10">
@@ -36,7 +36,7 @@ const CourseDetailsShow = ({ course }) => {
             <img src={img1} className="w-96" alt="" />
           </div>
           <div className="lg:w-2/3">
-            <div className="bg-green-600 text-white grid grid-cols-1 md:grid-cols-3 gap-10 p-5">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white grid grid-cols-1 md:grid-cols-3 gap-10 p-5">
               <p className="text-xl font-bold">
                 Course Id: <span className="font-light">{id}</span>
               </p>
@@ -58,8 +58,8 @@ const CourseDetailsShow = ({ course }) => {
               </p>
             </div>
             <div className="my-5">
-              <p className="text-xl text-green-400">{description}</p>
-              <hr className="border-2 border-green-600 w-full my-5" />
+              <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">{description}</p>
+              <hr className="border-2 border-purple-600 w-full my-5" />
             </div>
             <div className="text-lg my-3">
               {description2}
@@ -72,7 +72,7 @@ const CourseDetailsShow = ({ course }) => {
                 <table className="table table-zebra">
                   {/* head */}
                   <thead>
-                    <tr className="bg-green-600 text-white text-xl">
+                    <tr className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xl">
                       <th>Time</th>
                       <th>Room</th>
                       <th>Date Range</th>
@@ -105,8 +105,8 @@ const CourseDetailsShow = ({ course }) => {
             success since 2004.
           </p>
           <div className="flex gap-6">
-            <button className="btn bg-green-600 text-white">Apply</button>
-            <button className="btn bg-green-600 text-white">
+            <button className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-white">Apply</button>
+            <button className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-white">
               Download Brochure
             </button>
           </div>

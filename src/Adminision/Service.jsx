@@ -5,7 +5,7 @@ import { FaUniversity} from 'react-icons/fa'
 const Service = () => {
     return (
         <div>
-            <div className="flex-col md:flex-row flex justify-between items-center bg-green-950 text-slate-400">
+            <div className="flex-col md:flex-row flex justify-between items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white">
                 <div className="p-8">
                     <ImBooks className="text-7xl "></ImBooks>
                     <p className="text-2xl font-bold">Education Services</p>
