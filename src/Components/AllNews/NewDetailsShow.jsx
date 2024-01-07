@@ -13,6 +13,9 @@ const NewDetailsShow = ({ newS }) => {
             <p className="py-6">
             {title}
             </p>
+            <p className="py-6">
+            {date}
+            </p>
           </div>
         </div>
       </div>

@@ -6,6 +6,9 @@ import Service from "./Service";
 const Admission = () => {
   const data = useLoaderData();
   //   console.log(data);
+  // if(){
+  //   swal("Good job!", "You request send!", "successfully");
+  // }
   return (
     <div className="">
       <AdmissionBanner></AdmissionBanner>
@@ -77,7 +80,7 @@ const Admission = () => {
             the application fee can request a fee waiver.
           </li>
           <div className="flex-col lg:flex-row flex gap-5 ">
-            <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
+            <button  className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
               Request a campus tour
             </button>
             <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
