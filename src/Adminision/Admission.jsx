@@ -5,7 +5,6 @@ import Service from "./Service";
 
 const Admission = () => {
   const data = useLoaderData();
-  //   console.log(data);
   // if(){
   //   swal("Good job!", "You request send!", "successfully");
   // }
