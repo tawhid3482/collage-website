@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+import Button from "../Shayed/Button";
+
 const News = ({ saikat }) => {
   //   console.log(saikat);
-  const { name, title, img, date } = saikat;
+  const {id, name, title, img, date } = saikat;
   return (
     <div>
       <div className="card w-96 my-3 bg-base-100 shadow-xl">
@@ -13,7 +16,7 @@ const News = ({ saikat }) => {
           </p>
           <h2 className="card-title">{name}</h2>
           <div className="card-actions justify-start">
-            <button className="btn bg-gradient-to-r from-purple-600 to-pink-500 text-white">Read More</button>
+           <Link to={`/news/${id}`}><Button text={'Read more'}></Button></Link>
           </div>
         </div>
       </div>

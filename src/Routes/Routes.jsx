@@ -8,6 +8,7 @@ import Courses from "../Course/Courses";
 import CourseDetails from "../Course/CourseDetails";
 import Athletics from "../Athletics/Athletics";
 import UnivercityLife from "../Univercity/UnivercityLife";
+import NewsDetails from "../Components/AllNews/NewsDetails";
 
 const Routes = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const Routes = createBrowserRouter([
         path:"univercity",
         element:<UnivercityLife></UnivercityLife>,
         loader:()=>fetch('/unilife.json')
+      },
+      {
+        path:'news/:id',
+        element:<NewsDetails></NewsDetails>,
+        loader:()=>fetch('/news.json')
       }
     ],
   },
