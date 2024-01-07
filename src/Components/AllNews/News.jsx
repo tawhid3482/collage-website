@@ -8,12 +8,12 @@ const News = ({ saikat }) => {
           <img src={img} className="h-60" alt="img" />
         </figure>
         <div className="card-body">
-          <p className="text-green-400 ">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  ">
             {date} / {title}
           </p>
           <h2 className="card-title">{name}</h2>
           <div className="card-actions justify-start">
-            <button className="btn bg-green-600 text-white">Read More</button>
+            <button className="btn bg-gradient-to-r from-purple-600 to-pink-500 text-white">Read More</button>
           </div>
         </div>
       </div>

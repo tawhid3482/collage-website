@@ -13,7 +13,7 @@ const About = () => {
             <p className="text-3xl font-bold">Sylhet Polytacnic Institute</p>
           </div>
           <div className="">
-            <h2 className="text-green-600 text-4xl font-bold text-center">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  text-4xl font-bold text-center">
               About Our University
             </h2>
           </div>
@@ -35,8 +35,7 @@ const About = () => {
             <Link to={"/page"}>
               {" "}
               <Button text={"Read more"} icon={<FaArrowRight className="text-xl"></FaArrowRight>}>
-                {" "}
-            
+                
               </Button>
             </Link>
           </div>

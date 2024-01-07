@@ -25,7 +25,7 @@ const Course = () => {
     
       </div>
       <div className="text-center my-5">
-        <button className="btn bg-green-500 text-lg border-none text-white">Search Course</button>
+        <button className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-lg border-none text-white">Search Course</button>
       </div>
     </div>
   );

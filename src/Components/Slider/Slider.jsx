@@ -47,7 +47,7 @@ const Slider = () => {
           </Swiper>
         </div>
       <Link to={'/course'} className="">
-      <div className="md:1/3 bg-green-600 flex justify-center items-center text-white p-5">
+      <div className="md:1/3 bg-gradient-to-r from-purple-600 to-pink-500 flex justify-center items-center text-white p-5">
           <img src={logo} className="w-32 h-24" alt="" />
           <p className="text-2xl font-bold p-4 rounded-lg">
             Apply To Sylhet Polytacnic Institute

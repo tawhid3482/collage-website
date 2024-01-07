@@ -16,7 +16,7 @@ const Courses = () => {
         </p>
       </div>
       <div className="flex-col md:flex-row md:flex justify-between  gap-5 my-8">
-        <div className="lg:w-1/3 border border-green-600 p-6 text-white bg-black  flex-col flex items-center justify-center">
+        <div className="lg:w-1/3 border border-purple-600 p-6 text-white bg-black  flex-col flex items-center justify-center">
           <p className="text-4xl font-bold">Search Your Courses</p>
           <div className="bg">
             <input

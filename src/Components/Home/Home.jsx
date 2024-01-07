@@ -12,7 +12,7 @@ import UnderPart from "../UnderBannerPart/UnderPart";
 
 const Home = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto p-5">
             <br />
             <br />
             <br />

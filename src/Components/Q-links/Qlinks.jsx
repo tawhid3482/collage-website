@@ -23,14 +23,14 @@ const Qlinks = () => {
             T’s global leadership capacity.
           </p>
           <div className="">
-          <button className="btn bg-green-600 text-lg text-white w-56">
+          <button className="btn bg-gradient-to-l from-purple-600 to-pink-500 text-lg text-white w-56">
            <GiSelfLove></GiSelfLove>  Become a Donar
           </button>
           </div>
         </div>
         <div className="space-y-3 w-full md:w-full lg:w-1/3 text-center">
             <div className="flex justify-center items-center">
-            <TfiEmail className="text-9xl text-green-600 "></TfiEmail>
+            <TfiEmail className="text-9xl text-purple-600 "></TfiEmail>
 
             </div>
           <p className="text-3xl font-bold text-center">
@@ -47,7 +47,7 @@ const Qlinks = () => {
             className="p-3 bg-gray-300 w-60"
           />
           <br />
-          <button className="btn bg-green-600 text-lg text-white w-60">
+          <button className="btn bg-gradient-to-l from-purple-600 to-pink-500 text-lg text-white w-60">
           Subscribe
           </button>
         </div>
@@ -57,18 +57,18 @@ const Qlinks = () => {
             <span className="text-3xl font-bold text-white">Quick Links</span>
           </div>
           <div className="grid grid-cols-1 space-y-2  p-5">
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">
               Alumni & Donors
             </Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">Athletic Calendar</Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">All Kingster’s Events</Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">Partnership & Out Reach</Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">Athletic Calendar</Link>
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">All Kingster’s Events</Link>
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">Partnership & Out Reach</Link>
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">
               Alumni & Donors
             </Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">Athletic Calendar</Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">All Kingster’s Events</Link>
-            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-green-600">Partnership & Out Reach</Link>
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">Athletic Calendar</Link>
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">All Kingster’s Events</Link>
+            <Link to="https://www.facebook.com" className="mt-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">Partnership & Out Reach</Link>
           </div>
         </div>
       </div>

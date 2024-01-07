@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import students from "../../../assets/student.jpg";
+import Button from "../Button";
 const Students = () => {
   return (
     <div>
@@ -8,7 +9,7 @@ const Students = () => {
           <img src={students} className=" w-full h-[420px]  rounded-lg shadow-2xl" />
           <div className="space-y-3">
             <h1 className="text-5xl font-bold">Apply for Admission</h1>
-            <h1 className="text-3xl font-bold text-green-600 mt-5">
+            <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  mt-5">
               Fall 2019 applications are now open
             </h1>
             <p className="py-6">
@@ -18,7 +19,7 @@ const Students = () => {
               lead it.
             </p>
            <Link to='/admission'> 
-           <button className="btn bg-green-800 text-white">Applay Now</button>
+          <Button text={'Apply now'}></Button>
            </Link>
           </div>
         </div>
