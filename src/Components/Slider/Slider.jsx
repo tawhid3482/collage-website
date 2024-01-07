@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   return (
@@ -45,12 +46,15 @@ const Slider = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="md:1/3 bg-green-600 flex justify-center items-center text-white">
+      <Link to={'/course'} className="">
+      <div className="md:1/3 bg-green-600 flex justify-center items-center text-white p-5">
           <img src={logo} className="w-32 h-24" alt="" />
           <p className="text-2xl font-bold p-4 rounded-lg">
             Apply To Sylhet Polytacnic Institute
           </p>
+         
         </div>
+      </Link>
       </div>
     </div>
   );
