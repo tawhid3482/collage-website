@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import banner from "../../assets/25398880_10154951833596890_317498250930511676_n.jpg";
+import Button from "../Shayed/Button";
 const Banner = () => {
   return (
     <div className="">
@@ -19,9 +20,7 @@ const Banner = () => {
               et a id nisi.
             </p>
             <Link to='/page'>
-              <button className="btn uppercase text-white  bg-green-800">
-                About More
-              </button>
+             <Button text={'About more'}></Button>
             </Link>
           </div>
         </div>

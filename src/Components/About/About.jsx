@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/collage-removebg-preview.png";
 import { FaArrowRight } from "react-icons/fa";
+import Button from "../Shayed/Button";
 
 const About = () => {
   return (
@@ -31,11 +32,12 @@ const About = () => {
             has pioneered change in the sector.
           </p>
           <div className="">
-            <Link to={'/page'}>
+            <Link to={"/page"}>
               {" "}
-              <button className="btn bg-green-800 text-white">
-                Read More <FaArrowRight className="text-xl"></FaArrowRight>
-              </button>
+              <Button text={"Read more"} icon={<FaArrowRight className="text-xl"></FaArrowRight>}>
+                {" "}
+            
+              </Button>
             </Link>
           </div>
         </div>

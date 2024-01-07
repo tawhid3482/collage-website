@@ -76,7 +76,7 @@ const Navber = () => {
         </div>
       </div>
       <ul
-        className={` md:flex md:justify-center rounded-md w-40  md:w-full duration-1000 absolute left-0 md:static bg-base-200 text-black p-4
+        className={` md:flex md:justify-center rounded-md md:w-full duration-1000 absolute left-0 md:static bg-base-200 text-black p-4
       ${openMenu ? "top-16" : "-top-72"}
       `}
       >
