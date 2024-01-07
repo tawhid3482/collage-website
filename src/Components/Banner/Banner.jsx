@@ -18,7 +18,7 @@ const Banner = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <Link to='/'>
+            <Link to='/page'>
               <button className="btn uppercase text-white  bg-green-800">
                 About More
               </button>

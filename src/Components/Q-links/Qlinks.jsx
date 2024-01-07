@@ -1,6 +1,7 @@
 import { FaLink } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { GiSelfLove } from "react-icons/gi";
 
 const Qlinks = () => {
   return (
@@ -9,21 +10,21 @@ const Qlinks = () => {
         <div className="space-y-3 w-full md:w-full lg:w-1/3 p-5">
           <img
             src="https://thumbs.dreamstime.com/b/donate-money-vector-illustration-charity-donation-concept-hand-putting-banknote-box-eps-143816912.jpg"
-            className="w-96 h-60 border-green-500 border-2"
+            className="w-96 h-60 border"
             alt=""
           />
           <p className="text-3xl font-bold">Donation helps us</p>
           <p className="w-60 lg:w-96">
-            The Campaign for the Kingster University is the
-            <span className="font-bold">
+            The Campaign for the Kingster University is the 
+             <span className="font-bold ml-1">
               largest fundraising campaign in history
             </span>
             . With a historic $1 billion goal, the campaign is expanding U of
             T’s global leadership capacity.
           </p>
           <div className="">
-          <button className="btn bg-green-600 text-white w-56">
-            Become a Donar
+          <button className="btn bg-green-600 text-lg text-white w-56">
+           <GiSelfLove></GiSelfLove>  Become a Donar
           </button>
           </div>
         </div>
@@ -46,8 +47,8 @@ const Qlinks = () => {
             className="p-3 bg-gray-300 w-60"
           />
           <br />
-          <button className="btn bg-green-600 text-white w-60">
-            Become a Donar
+          <button className="btn bg-green-600 text-lg text-white w-60">
+          Subscribe
           </button>
         </div>
         <div className="w-full md:w-full lg:w-1/3 p-8  lg:h-[420px] bg-gray-900">
