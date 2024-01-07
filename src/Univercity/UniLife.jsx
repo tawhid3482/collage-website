@@ -13,7 +13,7 @@ const UniLife = ({ uni }) => {
           <h2 className="card-title">{name}</h2>
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <button className="btn text-green-500 text-lg">Read more</button>
+            <button className="btn text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  text-lg">Read more</button>
           </div>
         </div>
       </div>

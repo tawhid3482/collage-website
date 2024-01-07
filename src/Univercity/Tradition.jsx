@@ -7,7 +7,7 @@ const Tradition = () => {
       <p className="text-3xl font-bold my-5">Event and Traditions</p>
       <div className=" flex-col md:flex-row lg:flex justify-between items-start gap-8">
         <div className="space-y-3 lg:w-1/2 p-4">
-          <p className="text-xl text-green-500 font-medium">
+          <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  font-medium">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated they
             live in
@@ -18,10 +18,10 @@ const Tradition = () => {
             live in
           </p>
           <hr
-            className="border-2 border-green-500 
+            className="border-2 border-purple-500 
            my-5"
           />
-          <div className="bg-green-500 p-10 text-white">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-10 text-white">
             <GiLifeSupport className="text-8xl " />
             <p className="text-2xl font-bold "> Social Life </p>
             <div className="">

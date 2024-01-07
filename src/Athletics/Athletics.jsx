@@ -17,10 +17,10 @@ const Athletics = () => {
       </div>
       <div className="">
         <Subtitle sub={"Home"} title={"Athletics"}></Subtitle>
-        <hr className="border-2 border-green-500 w-80" />
+        <hr className="border-2 border-purple-500 w-80" />
       </div>
       <div className="">
-        <p className="text-lg text-green-500 mt-5">
+        <p className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  mt-5">
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, <br /> there live the blind texts. Separated
           they live in
@@ -43,7 +43,7 @@ const Athletics = () => {
         <span className="text-4xl font-bold">Upcoming Events</span>
         <hr className="border border-gray-400 w-32" />
       </div>
-      <p className="text-lg text-green-500 ml-1">Read All News</p>
+      <p className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  ml-1">Read All News</p>
       <div className= " flex-col lg:flex-row lg:flex justify-between items-start gap-7 my-8 ">
         <div className=" my-8 lg:my-0 relative overflow-hidden group lg:w-1/3">
           <img
@@ -104,8 +104,8 @@ const Athletics = () => {
         <div className=" lg:w-1/3 p-1">
           <div className=" flex items-center gap-5">
            <div className="">
-           <p className="text-2xl text-green-500 font-bold">17 <br /> DEC</p>
-            <hr className="border-2 border-green-500 w-12" />
+           <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  font-bold">17 <br /> DEC</p>
+            <hr className="border-2 border-purple-500 w-12" />
            </div>
            <div className="">
            <p className=" text-2xl font-bold hover:text-green-500 ">
@@ -116,11 +116,11 @@ const Athletics = () => {
               Professor Albert joint research on mobile money in Tanzania
             </p>
             <div className="flex items-center gap-3 ">
-               <div className="text-green-500 flex  items-center gap-3">
+               <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  flex  items-center gap-3">
                     <FaClock></FaClock>
                 <p>1:00 pm - 1:00 pm</p>
                </div>
-               <div className="text-green-500 flex items-center gap-2">
+               <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  flex items-center gap-2">
                     <FaLocationArrow></FaLocationArrow>
                 <p>Kingster Grand Hall</p>
                </div>
@@ -129,8 +129,8 @@ const Athletics = () => {
           </div>
           <div className=" flex items-center gap-5 my-5">
            <div className="">
-           <p className="text-2xl text-green-500 font-bold">27 <br /> DEC</p>
-            <hr className="border-2 border-green-500 w-12" />
+           <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  font-bold">27 <br /> DEC</p>
+            <hr className="border-2 border-purple-500 w-12" />
            </div>
            <div className="">
            <p className=" text-2xl font-bold hover:text-green-500 ">
@@ -141,11 +141,11 @@ const Athletics = () => {
               Professor Albert joint research on mobile money in Tanzania
             </p>
             <div className="flex items-center gap-3 ">
-               <div className="text-green-500 flex  items-center gap-3">
+               <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  flex  items-center gap-3">
                     <FaClock></FaClock>
                 <p>1:00 pm - 1:00 pm</p>
                </div>
-               <div className="text-green-500 flex items-center gap-2">
+               <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  flex items-center gap-2">
                     <FaLocationArrow></FaLocationArrow>
                 <p>Kingster Grand Hall</p>
                </div>
@@ -154,8 +154,8 @@ const Athletics = () => {
           </div>
           <div className=" flex items-center gap-5">
            <div className="">
-           <p className="text-2xl text-green-500 font-bold">05 <br /> DEC</p>
-            <hr className="border-2 border-green-500 w-12" />
+           <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  font-bold">05 <br /> DEC</p>
+            <hr className="border-2 border-purple-500 w-12" />
            </div>
            <div className="">
            <p className=" text-2xl font-bold hover:text-green-500 ">
@@ -166,11 +166,11 @@ const Athletics = () => {
               Professor Albert joint research on mobile money in Tanzania
             </p>
             <div className="flex items-center gap-3 ">
-               <div className="text-green-500 flex  items-center gap-3">
+               <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  flex  items-center gap-3">
                     <FaClock></FaClock>
                 <p>1:00 pm - 1:00 pm</p>
                </div>
-               <div className="text-green-500 flex items-center gap-2">
+               <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  flex items-center gap-2">
                     <FaLocationArrow></FaLocationArrow>
                 <p>Kingster Grand Hall</p>
                </div>
