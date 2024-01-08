@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import NavRoutes from "./NavRoutes";
-import logo from '../../assets/collage.jpg'
+import logo from "../../assets/collage.jpg";
+import Login from "../../Authentication/Login";
 
 const Navber = () => {
   const [openMenu, setMenu] = useState(false);
@@ -22,47 +23,43 @@ const Navber = () => {
   return (
     <nav className=" fixed w-full z-30 flex justify-between items-center md:justify-center md:items-center md:text-black p-1 bg-base-200">
       <div className="">
-        {/* <p className="text-3xl font-bold">SPI</p> */}
-        {/* <div className="hidden dropdown">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="dropdown ">
+          {
+            user? <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
             <div className="w-10 rounded-full">
-              {user?.photoURL ? (
-                <img src={user?.photoURL} alt="" />
-              ) : (
-                <img src="" alt="" />
-              )}
+              <img
+                alt="Tailwind CSS Navbar component"
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
             </div>
-          </label>
-          <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
-            <li className="">
-              <button className="btn btn-sm uppercase">
-                {user?.displayName}
-              </button>
+          </div>
+           : <button className="btn">login</button>
+          }
+           {
+            user ?  <ul
+            tabIndex={0}
+            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </a>
             </li>
+            <li>
+              <a>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul> : <p></p>
+           }
 
-            <li className="">
-              {user && isAdmin && (
-                <Link
-                  to={"/dashboard/adminHome"}
-                  className="btn btn-sm uppercase"
-                >
-                  Dashboard
-                </Link>
-              )}
-              {user && !isAdmin && (
-                <Link to={"/dashboard/home"} className="btn btn-sm uppercase">
-                  Dashboard
-                </Link>
-              )}
-            </li>
-
-            <li className="">
-              <button onClick={logOut} className="btn btn-sm uppercase">
-                Logout
-              </button>
-            </li>
-          </ul>
-        </div> */}
+        </div>
       </div>
       <div className="">
         <div
