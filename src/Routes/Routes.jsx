@@ -9,6 +9,7 @@ import CourseDetails from "../Course/CourseDetails";
 import Athletics from "../Athletics/Athletics";
 import UnivercityLife from "../Univercity/UnivercityLife";
 import NewsDetails from "../Components/AllNews/NewsDetails";
+import Login from "../Authentication/Login";
 
 const Routes = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const Routes = createBrowserRouter([
         path:'news/:id',
         element:<NewsDetails></NewsDetails>,
         loader:()=>fetch('/news.json')
+      },
+      {
+        path:"login",
+        element:<Login></Login>
       }
     ],
   },
