@@ -1,10 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import Course from "./Course";
+import Helmets from "../Helmets/Helmets";
 
 const Courses = () => {
   const data = useLoaderData();
   return (
     <div className="p-8">
+       <div className="">
+        <Helmets text={'SPI - Course'}></Helmets>
+      </div>
       <div className="space-y-4">
         <br />
         <br />

@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AdmissionBanner from "./AdmissionBanner";
 import Aplication from "./Aplication";
 import Service from "./Service";
+import Helmets from "../Helmets/Helmets";
 
 const Admission = () => {
   const data = useLoaderData();
@@ -10,6 +11,9 @@ const Admission = () => {
   // }
   return (
     <div className="">
+      <div className="">
+        <Helmets text={'SPI - Admission'}></Helmets>
+      </div>
       <AdmissionBanner></AdmissionBanner>
       <div className="my-4 p-8">
         <p className="text-xl text-slate-400">

@@ -24,7 +24,7 @@ const Routes = createBrowserRouter([
       {
         path: "admission",
         element:<Admission></Admission>,
-        loader:()=>fetch('/application.json')
+        loader:()=>fetch('http://localhost:5000/application')
       },
       {
         path:"page",
@@ -45,14 +45,14 @@ const Routes = createBrowserRouter([
         element:<Athletics></Athletics>,
       },
       {
-        path:"univercity",
+        path:"university",
         element:<UnivercityLife></UnivercityLife>,
-        loader:()=>fetch('/unilife.json')
+        loader:()=>fetch('http://localhost:5000/uniEvents')
       },
       {
         path:'news/:id',
         element:<NewsDetails></NewsDetails>,
-        loader:()=>fetch('/news.json')
+        loader:()=>fetch('http://localhost:5000/news')
       },
       {
         path:"login",

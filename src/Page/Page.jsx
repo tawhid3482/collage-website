@@ -1,13 +1,16 @@
 import Baner from "../Components/Shayed/Baner";
 import Subtitle from "../Components/Shayed/Subtitle";
 import Sponser from "../Components/Sponser/Sponser";
+import Helmets from "../Helmets/Helmets";
 import collage from "../assets/University of Toulouse.jpg";
 import Banner from "./Banner";
 import PageSer from "./PageSer/PageSer";
 const Page = () => {
   return (
     <div className="mb-8">
-
+        <div className="">
+          <Helmets text={'SPI - Page'}></Helmets>
+        </div>
       <Baner img={collage} title1={'Know Us Better'} title2={'About Us'}></Baner>
 
       <div className=" ">

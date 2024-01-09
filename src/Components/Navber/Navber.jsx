@@ -3,7 +3,7 @@ import { MdOutlineMenuOpen } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import NavRoutes from "./NavRoutes";
 import logo from "../../assets/collage.jpg";
-import Login from "../../Authentication/Login";
+// import Login from "../../Authentication/Login";
 
 const Navber = () => {
   const [openMenu, setMenu] = useState(false);
@@ -15,7 +15,7 @@ const Navber = () => {
     { path: "/page", name: "Page" },
     { path: "/course", name: "Course" },
     { path: "/athletics", name: "Athletics" },
-    { path: "/univercity", name: "UnivercityLife" },
+    { path: "/university", name: "University Life" },
     { path: "/login", name: "Login" },
   ];
 

@@ -5,9 +5,13 @@ import athletics from "../assets/sports.jpg";
 import Banner from "./Banner";
 import Sponser from "../Components/Sponser/Sponser";
 import Participate from "./Participate";
+import Helmets from "../Helmets/Helmets";
 const Athletics = () => {
   return (
     <div className="p-7">
+       <div className="">
+        <Helmets text={'SPI - Athletics'}></Helmets>
+      </div>
       <div className="">
         <Baner
           img={athletics}

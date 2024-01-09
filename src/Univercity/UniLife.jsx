@@ -1,7 +1,12 @@
+import Helmets from "../Helmets/Helmets";
+
 const UniLife = ({ uni }) => {
   const { name, img, description } = uni;
   return (
     <div>
+       <div className="">
+        <Helmets text={'SPI - University Life'}></Helmets>
+      </div>
       <div className="card w-80 lg:w-96 bg-base-100 shadow-xl">
         <figure>
           <img
