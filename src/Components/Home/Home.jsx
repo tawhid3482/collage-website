@@ -1,3 +1,4 @@
+import Helmets from "../../Helmets/Helmets";
 import About from "../About/About";
 import AllNews from "../AllNews/AllNews";
 import Banner from "../Banner/Banner";
@@ -13,6 +14,9 @@ import UnderPart from "../UnderBannerPart/UnderPart";
 const Home = () => {
     return (
         <div className="container mx-auto p-5">
+            <div className="">
+            <Helmets text={'SPI - Home'}></Helmets>
+            </div>
             <br />
             <br />
             <br />
