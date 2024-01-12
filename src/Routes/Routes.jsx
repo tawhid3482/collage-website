@@ -10,6 +10,7 @@ import Athletics from "../Athletics/Athletics";
 import UnivercityLife from "../Univercity/UnivercityLife";
 import NewsDetails from "../Components/AllNews/NewsDetails";
 import Login from "../Authentication/Login";
+import Registration from "../Authentication/Registration";
 
 const Routes = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const Routes = createBrowserRouter([
       {
         path:"login",
         element:<Login></Login>
+      },
+      {
+        path:"registration",
+        element:<Registration></Registration>
       }
     ],
   },

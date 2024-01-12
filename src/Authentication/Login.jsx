@@ -6,10 +6,13 @@ import {
   LoadCanvasTemplate,
   validateCaptcha,
 } from "react-simple-captcha";
+import AuthHook from "../Hooks/AuthHook";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const captchaRef = useRef(null);
   const [disabled, setDisabled] = useState(true);
+  const {signInUser,Logout}= AuthHook()
   
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -21,6 +24,11 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    signInUser(email,password)
+    .then(result =>{
+      const user = result.user
+      console.log(user)
+    })
   };
   const handleValiedCaptcha = () => {
     const user_captcha_value = captchaRef.current.value;
@@ -95,6 +103,10 @@ const Login = () => {
                 />
               </div>
             </form>
+            <div className="mb-5 text-center">
+              <p>If you are not register member? </p>
+              <p>Please <Link className="text-purple-600" to='/registration'>Sign up</Link></p>
+            </div>
           </div>
         </div>
       </div>
