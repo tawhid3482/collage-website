@@ -2,20 +2,28 @@ import { Link } from "react-router-dom";
 import AuthHook from "../Hooks/AuthHook";
 import security from "../assets/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37373.avif";
 import { useForm } from "react-hook-form";
+import Helmets from "../Helmets/Helmets";
 
 const Registration = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
 
+  const {createUser} = AuthHook()
+
   const onSubmit = data =>{
     console.log(data)
+    createUser(data.email, data.password)
+      .then( result =>{
+          const user = result.user
+          console.log(user)
+      })
+    reset
   };
   // console.log(watch("example"))
-  // const {createUser} = AuthHook()
 
   // const handleRegister = e =>{
   //     e.preventDefault()
@@ -34,6 +42,9 @@ const Registration = () => {
 
   return (
     <div>
+      <div className="">
+        <Helmets text={'SPI - Registration'}></Helmets>
+      </div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
@@ -89,7 +100,9 @@ const Registration = () => {
                   className="input input-bordered"
                   
                 />
-                {errors.password && <span className="text-red-600">This field is required</span>}
+                {errors.password?.type === 'required' && <span className="text-red-600">This field is required</span>}
+                {errors.password?.type === 'minLength' && <span className="text-red-600">Password must be 6 char</span>}
+                {errors.password?.type === 'maxLength' && <span className="text-red-600">Password must be less then 16 char</span>}
               </div>
               <div className="form-control mt-6">
                 <input
