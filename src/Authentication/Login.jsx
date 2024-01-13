@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect,  useState } from "react";
 import Helmets from "../Helmets/Helmets";
 import security from "../assets/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37373.avif";
 import {
@@ -11,8 +11,9 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const captchaRef = useRef(null);
+  
   const [disabled, setDisabled] = useState(true);
+
   const {signInUser}= AuthHook()
   
   useEffect(() => {
@@ -20,6 +21,7 @@ const Login = () => {
   }, []);
 
   const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -41,20 +43,22 @@ const Login = () => {
      
     })
   };
-  const handleValiedCaptcha = () => {
-    const user_captcha_value = captchaRef.current.value;
+
+  const handleValiedCaptcha = (e) => {
+    const user_captcha_value = e.target.value;
     // console.log(value);
     if (validateCaptcha(user_captcha_value)) {
       setDisabled(false);
+      
+    } else {
+      setDisabled(true);
       Swal.fire({
         position: "top-end",
-        icon: "success",
-        title: "Your captcha valid successfully",
+        icon: "error",
+        title: "Your captcha valid unsuccessfully",
         showConfirmButton: false,
         timer: 1500
       });
-    } else {
-      setDisabled(true);
     }
   };
   return (
@@ -100,17 +104,12 @@ const Login = () => {
                 <input
                   type="text"
                   placeholder="Captcha"
+                  onBlur={handleValiedCaptcha}
                   name="captcha"
-                  ref={captchaRef}
                   className="input input-bordered"
                   required
                 />
-                <button
-                  onClick={handleValiedCaptcha}
-                  className="btn btn-outline btn-xs mt-2 btn-error"
-                >
-                  valid
-                </button>
+              
               </div>
               <div className="form-control mt-6">
                 <input

@@ -14,7 +14,7 @@ const createUser =(email,password)=>{
 }
 const signInUser = (email,password)=>{
     setLoading(true)
-    return signInWithEmailAndPassword(email,password)
+    return signInWithEmailAndPassword(Auth,email,password)
 }
 
 const logoutUser =()=>{
