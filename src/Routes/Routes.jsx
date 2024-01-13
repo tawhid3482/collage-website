@@ -11,6 +11,7 @@ import UnivercityLife from "../Univercity/UnivercityLife";
 import NewsDetails from "../Components/AllNews/NewsDetails";
 import Login from "../Authentication/Login";
 import Registration from "../Authentication/Registration";
+import PrivateRoutes from "./PrivateRoutes";
 
 const Routes = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const Routes = createBrowserRouter([
       },
       {
         path:"course/:id",
-        element:<CourseDetails></CourseDetails>,
+        element:<PrivateRoutes><CourseDetails></CourseDetails></PrivateRoutes> ,
         loader:()=>fetch('http://localhost:5000/department')
       },
       {

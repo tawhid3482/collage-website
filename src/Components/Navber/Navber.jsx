@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const Navber = () => {
   const [openMenu, setMenu] = useState(false);
-  const { user,  logoutUser } = AuthHook()
-
+  const { user, logoutUser } = AuthHook();
+  console.log(user?.displayName);
   const routes = [
     { path: "/", name: "Home" },
     { path: "/admission", name: "Admission" },
@@ -24,40 +24,42 @@ const Navber = () => {
     <nav className=" fixed w-full z-30 flex justify-between items-center md:justify-center md:items-center md:text-black p-1 bg-base-200">
       <div className="">
         <div className="dropdown ">
-          {
-            user? <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
+          {user ? (
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-12 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src={user?.photoURL}
+                />
+              </div>
             </div>
-          </div>
-           : <Link to='/login'><button className="btn">login</button></Link>
-          }
-           {
-            user ?  <ul
-            tabIndex={0}
-            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <Link className="justify-between">
-               Name
-              </Link>
-            </li>
-            <li>
-              <Link>Dashboard</Link>
-            </li>
-            <li onClick={logoutUser}>
-              <Link>Logout</Link>
-            </li>
-          </ul> : <p></p>
-           }
-
+          ) : (
+            <Link to="/login">
+              <button className="btn">login</button>
+            </Link>
+          )}
+          {user ? (
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] bg-gradient-to-r from-purple-600 to-pink-600  text-white p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
+                <p className="">{user?.displayName}</p>
+              </li>
+              <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
+                <Link>Dashboard</Link>
+              </li>
+              <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg" onClick={logoutUser}>
+                <Link>Logout</Link>
+              </li>
+            </ul>
+          ) : (
+            <p></p>
+          )}
         </div>
       </div>
       <div className="">

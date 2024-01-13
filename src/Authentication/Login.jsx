@@ -7,7 +7,7 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import AuthHook from "../Hooks/AuthHook";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Login = () => {
@@ -21,6 +21,8 @@ const Login = () => {
   }, []);
 
   const navigate = useNavigate()
+  const location = useLocation()
+  const from = location?.state?.from?.pathname || '/'
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +34,7 @@ const Login = () => {
     .then(result =>{
       const users = result.user
       console.log(users)
-      navigate('/')
+      navigate(from,{replace:true})
       Swal.fire({
         position: "top-end",
         icon: "success",

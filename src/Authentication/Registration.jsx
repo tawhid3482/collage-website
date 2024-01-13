@@ -3,6 +3,7 @@ import AuthHook from "../Hooks/AuthHook";
 import security from "../assets/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37373.avif";
 import { useForm } from "react-hook-form";
 import Helmets from "../Helmets/Helmets";
+import Swal from "sweetalert2";
 
 const Registration = () => {
   const {
@@ -12,7 +13,7 @@ const Registration = () => {
     formState: { errors },
   } = useForm();
 
-  const {createUser} = AuthHook()
+  const {createUser,updateUserProfile} = AuthHook()
   const navigate = useNavigate()
   const onSubmit = data =>{
     console.log(data)
@@ -21,8 +22,19 @@ const Registration = () => {
           const user = result.user
           console.log(user)
           navigate('/')
+          updateUserProfile(data.name, data.photo)
+          .then(()=>{
+            reset()
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "You are register successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          })
+          .catch(error=>console.log(error))
       })
-    reset
   };
  
 
