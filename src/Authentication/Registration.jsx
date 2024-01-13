@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate,  } from "react-router-dom";
 import AuthHook from "../Hooks/AuthHook";
 import security from "../assets/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37373.avif";
 import { useForm } from "react-hook-form";
@@ -13,32 +13,18 @@ const Registration = () => {
   } = useForm();
 
   const {createUser} = AuthHook()
-
+  const navigate = useNavigate()
   const onSubmit = data =>{
     console.log(data)
     createUser(data.email, data.password)
       .then( result =>{
           const user = result.user
           console.log(user)
+          navigate('/')
       })
     reset
   };
-  // console.log(watch("example"))
-
-  // const handleRegister = e =>{
-  //     e.preventDefault()
-  //     const form = e.target
-  //     const name = form.name.value;
-  //     const photo = form.photo.value
-  //     const email= form.email.value
-  //     const password = form.password.value
-  //     // console.log(name,photo,email,password)
-  //     createUser(email,password)
-  //     .then( result =>{
-  //         const user = result.user
-  //         console.log(user)
-  //     })
-  // }
+ 
 
   return (
     <div>
@@ -116,7 +102,7 @@ const Registration = () => {
               <p className="text-lg">If you are register member? </p>
               <p>
                 Please{" "}
-                <Link className="text-purple-600" to="/registration">
+                <Link className="text-purple-600" to="/login">
                   Sign in
                 </Link>
               </p>

@@ -3,11 +3,12 @@ import { MdOutlineMenuOpen } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import NavRoutes from "./NavRoutes";
 import logo from "../../assets/collage.jpg";
-// import Login from "../../Authentication/Login";
+import AuthHook from "../../Hooks/AuthHook";
+import { Link } from "react-router-dom";
 
 const Navber = () => {
   const [openMenu, setMenu] = useState(false);
-  const { user, isAdmin, logOut } = useState();
+  const { user,  logoutUser } = AuthHook()
 
   const routes = [
     { path: "/", name: "Home" },
@@ -36,7 +37,7 @@ const Navber = () => {
               />
             </div>
           </div>
-           : <button className="btn">login</button>
+           : <Link to='/login'><button className="btn">login</button></Link>
           }
            {
             user ?  <ul
@@ -44,16 +45,15 @@ const Navber = () => {
             className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
+              <Link className="justify-between">
+               Name
+              </Link>
             </li>
             <li>
-              <a>Settings</a>
+              <Link>Dashboard</Link>
             </li>
-            <li>
-              <a>Logout</a>
+            <li onClick={logoutUser}>
+              <Link>Logout</Link>
             </li>
           </ul> : <p></p>
            }

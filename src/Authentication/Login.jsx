@@ -7,17 +7,19 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import AuthHook from "../Hooks/AuthHook";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const captchaRef = useRef(null);
   const [disabled, setDisabled] = useState(true);
-  const {signInUser,Logout}= AuthHook()
+  const {signInUser}= AuthHook()
   
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
 
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -26,8 +28,17 @@ const Login = () => {
     console.log(email, password);
     signInUser(email,password)
     .then(result =>{
-      const user = result.user
-      console.log(user)
+      const users = result.user
+      console.log(users)
+      navigate('/')
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "You are login successfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
+     
     })
   };
   const handleValiedCaptcha = () => {
@@ -35,6 +46,13 @@ const Login = () => {
     // console.log(value);
     if (validateCaptcha(user_captcha_value)) {
       setDisabled(false);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your captcha valid successfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
     } else {
       setDisabled(true);
     }
@@ -91,7 +109,7 @@ const Login = () => {
                   onClick={handleValiedCaptcha}
                   className="btn btn-outline btn-xs mt-2 btn-error"
                 >
-                  Error
+                  valid
                 </button>
               </div>
               <div className="form-control mt-6">
