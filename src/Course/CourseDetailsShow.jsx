@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import AuthHook from "../Hooks/AuthHook";
 import { useNavigate } from "react-router-dom";
-import UseAxiosSecure, { axiosSecure } from "../Hooks/UseAxiosSecure";
+import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
 const CourseDetailsShow = ({ course }) => {
   // console.log(course)
@@ -26,7 +26,7 @@ const CourseDetailsShow = ({ course }) => {
   const navigate = useNavigate()
   const {user}=AuthHook()
   const axiosSecure = UseAxiosSecure()
-  const handleFee = (cl) => {
+  const handleFee = () => {
     // console.log(cl);
  
     if(user && user.email){
