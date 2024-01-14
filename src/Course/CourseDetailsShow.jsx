@@ -1,11 +1,11 @@
+import Swal from "sweetalert2";
+import AuthHook from "../Hooks/AuthHook";
+import { useNavigate } from "react-router-dom";
+
 const CourseDetailsShow = ({ course }) => {
   // console.log(course)
   const {
-    id,
-    name,
-    Department,
-    Campus,
-    Level,
+    id,name,Department,Campus,Level,
     Instructor,
     Semester,
     Credit,
@@ -21,9 +21,33 @@ const CourseDetailsShow = ({ course }) => {
     img2,
     fee,
   } = course;
-  const handleFee = (clas) => {
-    console.log(clas);
+
+  const navigate = useNavigate()
+  const {user}=AuthHook()
+  const handleFee = (cl) => {
+    // console.log(cl);
+ 
+    if(user && user.email){
+
+    } 
+    else{
+      Swal.fire({
+        title: "Please login first?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            navigate('/login')
+          
+        }
+      });
+    }
   };
+
   return (
     <div className="p-6 ">
       <div className="mt-20">
