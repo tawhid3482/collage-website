@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import AuthHook from "../Hooks/AuthHook";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const CourseDetailsShow = ({ course }) => {
   // console.log(course)
@@ -28,6 +29,18 @@ const CourseDetailsShow = ({ course }) => {
     // console.log(cl);
  
     if(user && user.email){
+
+      const cartItem ={
+        courseId:id,
+        email:user.email,
+        name,
+        Department,
+        Semester,
+        img1,
+        fee,
+
+      }
+      axios.post('')
 
     } 
     else{
