@@ -19,7 +19,11 @@ const CourseDetailsShow = ({ course }) => {
     dateRange,
     img1,
     img2,
+    fee,
   } = course;
+  const handleFee = (clas) => {
+    console.log(clas);
+  };
   return (
     <div className="p-6 ">
       <div className="mt-20">
@@ -27,7 +31,9 @@ const CourseDetailsShow = ({ course }) => {
         <h2 className="text-5xl font-bold">{name}</h2>
         <p className="text-lg my-3">
           Home {">"} Accounting Required Courses {">"}{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">{Department}</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">
+            {Department}
+          </span>
         </p>
       </div>
       <div className="my-10">
@@ -58,7 +64,9 @@ const CourseDetailsShow = ({ course }) => {
               </p>
             </div>
             <div className="my-5">
-              <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">{description}</p>
+              <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">
+                {description}
+              </p>
               <hr className="border-2 border-purple-600 w-full my-5" />
             </div>
             <div className="text-lg my-3">
@@ -104,15 +112,28 @@ const CourseDetailsShow = ({ course }) => {
             offered by the Institute of Advanced Legal Studies with considerable
             success since 2004.
           </p>
+          <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 ">
+            Course Fee: ${fee}
+          </p>
           <div className="flex gap-6">
-            <button className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-white">Apply</button>
+            <button
+              onClick={() => handleFee(course)}
+              className="btn bg-gradient-to-r
+             from-purple-600 to-pink-600
+              text-white"
+            >
+              Apply
+            </button>
+
             <button className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-white">
               Download Brochure
             </button>
           </div>
         </div>
       </div>
-      <div className="text-xl text-gray-500  font-medium my-8 ">{description4}</div>
+      <div className="text-xl text-gray-500  font-medium my-8 ">
+        {description4}
+      </div>
     </div>
   );
 };
