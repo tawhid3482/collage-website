@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import AuthHook from "../Hooks/AuthHook";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import UseAxiosSecure, { axiosSecure } from "../Hooks/UseAxiosSecure";
 
 const CourseDetailsShow = ({ course }) => {
   // console.log(course)
@@ -25,6 +25,7 @@ const CourseDetailsShow = ({ course }) => {
 
   const navigate = useNavigate()
   const {user}=AuthHook()
+  const axiosSecure = UseAxiosSecure()
   const handleFee = (cl) => {
     // console.log(cl);
  
@@ -40,7 +41,19 @@ const CourseDetailsShow = ({ course }) => {
         fee,
 
       }
-      axios.post('')
+      axiosSecure.post('carts',cartItem)
+      .then(res =>{
+        console.log(res.data)
+        if(res.data.insertedId){
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your course has been added to the carts",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      })
 
     } 
     else{
