@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../Shayed/Button";
 
 const News = ({ saikat }) => {
-  //   console.log(saikat);
+    // console.log(saikat);
   const {id, name, title, img, date } = saikat;
   return (
     <div>

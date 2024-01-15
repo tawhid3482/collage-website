@@ -4,6 +4,7 @@ import NewDetailsShow from "./NewDetailsShow";
 
 const NewsDetails = () => {
   const data= useLoaderData();
+  console.log(data)
   const [newS, setNews] = useState(null);
   const { id } = useParams();
 

@@ -3,7 +3,6 @@ import News from "./News";
 
 const AllNews = () => {
   const [news] = UseNews();
-console.log(news)
   return (
     <div className="my-5">
       <div className="flex items-center justify-center">

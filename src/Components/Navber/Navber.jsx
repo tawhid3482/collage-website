@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 const Navber = () => {
   const [openMenu, setMenu] = useState(false);
   const { user, logoutUser } = AuthHook();
-  console.log(user?.displayName);
   const routes = [
     { path: "/", name: "Home" },
     { path: "/admission", name: "Admission" },
