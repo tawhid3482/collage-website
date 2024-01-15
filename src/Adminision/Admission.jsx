@@ -97,7 +97,7 @@ const Admission = () => {
           </li>
           <div className="flex-col lg:flex-row flex gap-5 ">
             <button
-              onClick={() => handleClick}
+              onClick={() => handleClick()}
               className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 "
             >
               Request a campus tour
