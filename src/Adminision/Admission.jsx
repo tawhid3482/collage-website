@@ -3,16 +3,29 @@ import AdmissionBanner from "./AdmissionBanner";
 import Aplication from "./Aplication";
 import Service from "./Service";
 import Helmets from "../Helmets/Helmets";
+import AuthHook from "../Hooks/AuthHook";
+import Swal from "sweetalert2";
 
 const Admission = () => {
   const data = useLoaderData();
-  // if(){
-  //   swal("Good job!", "You request send!", "successfully")
-  // }
+  const {user} = AuthHook()
+  const handleClick = () => {
+    if (user) {
+      console.log('saikat')
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Your Request Send successfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+  };
+
   return (
     <div className="">
       <div className="">
-        <Helmets text={'SPI - Admission'}></Helmets>
+        <Helmets text={"SPI - Admission"}></Helmets>
       </div>
       <AdmissionBanner></AdmissionBanner>
       <div className="my-4 p-8">
@@ -83,7 +96,10 @@ const Admission = () => {
             the application fee can request a fee waiver.
           </li>
           <div className="flex-col lg:flex-row flex gap-5 ">
-            <button  className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
+            <button
+              onClick={() => handleClick}
+              className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 "
+            >
               Request a campus tour
             </button>
             <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
