@@ -102,7 +102,8 @@ const Admission = () => {
             >
               Request a campus tour
             </button>
-            <button className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
+            <button 
+            onClick={() => handleClick()}className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
               Request Information
             </button>
           </div>
