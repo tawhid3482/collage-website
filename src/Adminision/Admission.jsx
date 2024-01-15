@@ -11,7 +11,6 @@ const Admission = () => {
   const {user} = AuthHook()
   const handleClick = () => {
     if (user) {
-      console.log('saikat')
       Swal.fire({
         position: "top-center",
         icon: "success",
@@ -103,7 +102,7 @@ const Admission = () => {
               Request a campus tour
             </button>
             <button 
-            onClick={() => handleClick()}className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
+            onClick={() => handleClick()} className="btn text-lg text-white bg-gradient-to-r from-purple-600 to-pink-600 ">
               Request Information
             </button>
           </div>

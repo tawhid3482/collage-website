@@ -1,6 +1,20 @@
 import { FaBook } from "react-icons/fa";
+import AuthHook from "../Hooks/AuthHook";
+import Swal from "sweetalert2";
 
 const Participate = () => {
+    const {user}=AuthHook()
+    const handleClick = () => {
+        if (user) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Your Request Send successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      };
     return (
         <div className="my-10">
             <div className="flex-col lg:flex-row lg:flex justify-between items-center gap-16">
@@ -16,7 +30,9 @@ const Participate = () => {
                 <h2 className="text-3xl  font-bold">How To Participate?</h2>
                 <p className="text-lg my-3">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. </p>
                 <div className="my-5 ">
-                <button className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-lg text-white">Athletics guide book <FaBook className="text-xl"></FaBook></button>
+                <button
+                 onClick={() => handleClick()}
+                className="btn bg-gradient-to-r from-purple-600 to-pink-600 text-lg text-white">Athletics guide book <FaBook className="text-xl"></FaBook></button>
                 </div>
                 </div>
             </div>
