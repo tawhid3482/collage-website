@@ -69,9 +69,9 @@ const Login = () => {
         <Helmets text={"SPI - Login"}></Helmets>
       </div>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
+        <div className="hero-content flex-col lg:flex-row my-12">
           <div className="text-center lg:text-left">
-            <img src={security} className="w-full" alt="" />
+            <img src={security} className="w-full h-[550px]" alt="" />
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit} className="card-body h-full">

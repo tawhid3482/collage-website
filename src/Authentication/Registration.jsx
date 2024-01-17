@@ -25,14 +25,15 @@ const Registration = () => {
       console.log(user);
       navigate("/");
 
-      updateUserProfile(data.name, data.photo);
-      const userInfo = {
-        name: data.name,
-        email: data.email,
-      }
+      updateUserProfile(data.name, data.photo)
         .then(() => {
+          const userInfo = {
+            name: data.name,
+            email: data.email,
+          }
           axiosPublic.post("/users", userInfo).then((res) => {
-            if (res.data.insertedId) {
+            if (res.data.insertedId){
+              // console.log('users')
               reset();
               Swal.fire({
                 position: "top-end",
@@ -49,14 +50,14 @@ const Registration = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <div className="">
         <Helmets text={"SPI - Registration"}></Helmets>
       </div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
+      <div className="hero bg-base-200 ">
+        <div className="hero-content flex-col lg:flex-row my-12">
           <div className="text-center lg:text-left">
-            <img src={security} className="w-full" alt="" />
+            <img src={security} className="w-full h-[550px]" alt="" />
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form
