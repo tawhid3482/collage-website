@@ -1,9 +1,10 @@
-import { Link, useNavigate,  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthHook from "../Hooks/AuthHook";
 import security from "../assets/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37373.avif";
 import { useForm } from "react-hook-form";
 import Helmets from "../Helmets/Helmets";
 import Swal from "sweetalert2";
+import UseAxiosPublic from "../Hooks/UseAxiosPublic";
 
 const Registration = () => {
   const {
@@ -13,35 +14,44 @@ const Registration = () => {
     formState: { errors },
   } = useForm();
 
-  const {createUser,updateUserProfile} = AuthHook()
-  const navigate = useNavigate()
-  const onSubmit = data =>{
-    console.log(data)
-    createUser(data.email, data.password)
-      .then( result =>{
-          const user = result.user
-          console.log(user)
-          navigate('/')
-          updateUserProfile(data.name, data.photo)
-          .then(()=>{
-            reset()
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "You are register successfully",
-              showConfirmButton: false,
-              timer: 1500
-            });
-          })
-          .catch(error=>console.log(error))
-      })
+  const { createUser, updateUserProfile } = AuthHook();
+  const navigate = useNavigate();
+  const axiosPublic = UseAxiosPublic();
+
+  const onSubmit = (data) => {
+    // console.log(data)
+    createUser(data.email, data.password).then((result) => {
+      const user = result.user;
+      console.log(user);
+      navigate("/");
+
+      updateUserProfile(data.name, data.photo);
+      const userInfo = {
+        name: data.name,
+        email: data.email,
+      }
+        .then(() => {
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.data.insertedId) {
+              reset();
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "You are register successfully",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+            }
+          });
+        })
+        .catch((error) => console.log(error));
+    });
   };
- 
 
   return (
     <div>
       <div className="">
-        <Helmets text={'SPI - Registration'}></Helmets>
+        <Helmets text={"SPI - Registration"}></Helmets>
       </div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
@@ -49,18 +59,23 @@ const Registration = () => {
             <img src={security} className="w-full" alt="" />
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body h-full">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="card-body h-full"
+            >
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
                 <input
                   type="text"
-                  {...register("name",{ required: true })}
+                  {...register("name", { required: true })}
                   placeholder="Your Name"
                   className="input input-bordered"
                 />
-                {errors.name && <span className="text-red-600">This field is required</span>}
+                {errors.name && (
+                  <span className="text-red-600">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -68,11 +83,13 @@ const Registration = () => {
                 </label>
                 <input
                   type="photo"
-                  {...register("photo",{ required: true })}
+                  {...register("photo", { required: true })}
                   placeholder="Photo URL"
                   className="input input-bordered"
                 />
-                {errors.photo && <span className="text-red-600">This field is required</span>}
+                {errors.photo && (
+                  <span className="text-red-600">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -80,12 +97,13 @@ const Registration = () => {
                 </label>
                 <input
                   type="email"
-                  {...register("email",{ required: true })}
+                  {...register("email", { required: true })}
                   placeholder="email"
                   className="input input-bordered"
-                  
                 />
-                {errors.email && <span className="text-red-600">This field is required</span>}
+                {errors.email && (
+                  <span className="text-red-600">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -94,13 +112,24 @@ const Registration = () => {
                 <input
                   type="password"
                   placeholder="password"
-                  {...register("password",{ required: true, minLength:6 , maxLength:16})}
+                  {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 16,
+                  })}
                   className="input input-bordered"
-                  
                 />
-                {errors.password?.type === 'required' && <span className="text-red-600">This field is required</span>}
-                {errors.password?.type === 'minLength' && <span className="text-red-600">Password must be 6 char</span>}
-                {errors.password?.type === 'maxLength' && <span className="text-red-600">Password must be less then 16 char</span>}
+                {errors.password?.type === "required" && (
+                  <span className="text-red-600">This field is required</span>
+                )}
+                {errors.password?.type === "minLength" && (
+                  <span className="text-red-600">Password must be 6 char</span>
+                )}
+                {errors.password?.type === "maxLength" && (
+                  <span className="text-red-600">
+                    Password must be less then 16 char
+                  </span>
+                )}
               </div>
               <div className="form-control mt-6">
                 <input
