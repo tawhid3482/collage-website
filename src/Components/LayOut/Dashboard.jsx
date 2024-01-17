@@ -4,22 +4,22 @@ import { NavLink, Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div>
-      <div className="flex">
+      <div className="flex gap-5">
         <div className="w-64 min-h-full bg-gradient-to-t from-purple-600 to-pink-600">
           <ul className="menu p-4">
-            <li className="">
+            <li className="text-yellow-400 uppercase">
               <NavLink to="/dashboard/userHome">
-                User Home <FaHome className="text-xl text-purple-600"></FaHome>
+                User Home <FaHome className="text-xl ml-5"></FaHome>
               </NavLink>
             </li>
-            <li className="">
+            <li className="text-yellow-400 uppercase">
               <NavLink to="/dashboard/myCourse">
-                My Course <FaBook className="text-xl text-purple-600"></FaBook>
+                My Course <FaBook className="text-xl ml-5 "></FaBook>
               </NavLink>
             </li>
-            <li className="">
+            <li className="text-yellow-400 uppercase">
               <NavLink to="/dashboard/cart">
-                My Cart <FaShoppingCart className="text-xl text-purple-600"></FaShoppingCart>
+                My Cart <FaShoppingCart className="text-xl ml-5 text-white"></FaShoppingCart>
               </NavLink>
             </li>
           </ul>
