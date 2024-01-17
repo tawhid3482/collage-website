@@ -12,7 +12,8 @@ import NewsDetails from "../Components/AllNews/NewsDetails";
 import Login from "../Authentication/Login";
 import Registration from "../Authentication/Registration";
 import PrivateRoutes from "./PrivateRoutes";
-import Cart from "../Cart/Cart";
+import Dashboard from "../Components/LayOut/Dashboard";
+import MyCart from "../Components/Dashboard/MYCart/MyCart";
 
 const Routes = createBrowserRouter([
   {
@@ -65,12 +66,20 @@ const Routes = createBrowserRouter([
         path:"registration",
         element:<Registration></Registration>
       },
-      {
-        path:"carts",
-        element:<Cart></Cart>
-      }
+     
     ],
   },
+  {
+    path:'dashboard',
+    element:<Dashboard></Dashboard>,
+    errorElement:<Errorpage></Errorpage>,
+    children:[
+      {
+        path:'cart',
+        element:<MyCart></MyCart>
+      }
+    ]
+  }
 ]);
 
 export default Routes;

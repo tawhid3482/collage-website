@@ -43,7 +43,7 @@ const CourseDetailsShow = ({ course }) => {
       }
       axiosSecure.post('carts',cartItem)
       .then(res =>{
-        console.log(res.data)
+        // console.log(res.data)
         if(res.data.insertedId){
           Swal.fire({
             position: "top-end",
@@ -53,6 +53,7 @@ const CourseDetailsShow = ({ course }) => {
             timer: 1500
           });
         }
+        navigate('/dashboard/cart')
       })
 
     } 

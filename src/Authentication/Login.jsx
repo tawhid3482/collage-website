@@ -109,7 +109,6 @@ const Login = () => {
                   onBlur={handleValiedCaptcha}
                   name="captcha"
                   className="input input-bordered"
-                  required
                 />
               
               </div>
@@ -118,7 +117,7 @@ const Login = () => {
                   type="submit"
                   className="btn text-transparent bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:text-black hover:bg-gray-600"
                   value="Login"
-                  disabled={disabled}
+                  disabled={false}
                 />
               </div>
             </form>

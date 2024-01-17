@@ -50,7 +50,7 @@ const Navber = () => {
                 <p className="">{user?.displayName}</p>
               </li>
               <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
-                <Link>Dashboard</Link>
+                <Link to='/dashboard'>Dashboard</Link>
               </li>
               <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg" onClick={logoutUser}>
                 <Link>Logout</Link>
