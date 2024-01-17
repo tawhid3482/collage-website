@@ -13,6 +13,11 @@ const Dashboard = () => {
               </NavLink>
             </li>
             <li className="">
+              <NavLink to="/dashboard/myCourse">
+                My Course<FaShoppingCart className="text-xl text-purple-600"></FaShoppingCart>
+              </NavLink>
+            </li>
+            <li className="">
               <NavLink to="/dashboard/cart">
                 My Cart <FaShoppingCart className="text-xl text-purple-600"></FaShoppingCart>
               </NavLink>
