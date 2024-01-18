@@ -19,12 +19,12 @@ const Dashboard = () => {
             </li>
             <li className="text-yellow-400 uppercase">
               <NavLink to="/dashboard/cart">
-                My Cart <FaShoppingCart className="text-xl ml-5 text-white"></FaShoppingCart>
+                My Cart <FaShoppingCart className="text-xl ml-5 "></FaShoppingCart>
               </NavLink>
             </li>
             <li className="text-yellow-400 uppercase">
               <NavLink to="/dashboard/history">
-                My History <FaHistory className="text-xl ml-5 text-white"></FaHistory>
+                My History <FaHistory className="text-xl ml-5 "></FaHistory>
               </NavLink>
             </li>
           </ul>
