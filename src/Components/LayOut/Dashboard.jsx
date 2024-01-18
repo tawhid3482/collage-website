@@ -1,4 +1,4 @@
-import { FaBook, FaHome, FaShoppingCart } from "react-icons/fa";
+import { FaBook, FaHistory, FaHome, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
@@ -20,6 +20,11 @@ const Dashboard = () => {
             <li className="text-yellow-400 uppercase">
               <NavLink to="/dashboard/cart">
                 My Cart <FaShoppingCart className="text-xl ml-5 text-white"></FaShoppingCart>
+              </NavLink>
+            </li>
+            <li className="text-yellow-400 uppercase">
+              <NavLink to="/dashboard/history">
+                My History <FaHistory className="text-xl ml-5 text-white"></FaHistory>
               </NavLink>
             </li>
           </ul>
