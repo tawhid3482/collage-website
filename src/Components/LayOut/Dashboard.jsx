@@ -12,7 +12,7 @@ const Dashboard = () => {
         <div className="w-64  min-h-full h-screen bg-gradient-to-t from-purple-600 to-pink-600">
           <ul className="menu p-5">
             <li className="text-white mb-2 uppercase">
-              <NavLink to="/dashboard/userHome">
+              <NavLink to="/dashboard/studentHome">
               <FaHome className="text-xl mr-2"></FaHome>  Student Home 
               </NavLink>
             </li>

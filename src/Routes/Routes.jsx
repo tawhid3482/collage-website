@@ -14,6 +14,7 @@ import Registration from "../Authentication/Registration";
 import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../Components/LayOut/Dashboard";
 import MyCart from "../Components/Dashboard/MYCart/MyCart";
+import StHome from "../Components/Dashboard/StudentsHome/StHome";
 
 const Routes = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const Routes = createBrowserRouter([
       {
         path:'cart',
         element:<MyCart></MyCart>
+      }
+      ,{
+        path:'studentHome',
+        element:<StHome></StHome>
       }
     ]
   }
