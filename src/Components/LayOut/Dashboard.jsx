@@ -1,4 +1,4 @@
-import { FaBook, FaHistory, FaHome,  FaLifeRing,  FaPager, FaShoppingCart } from "react-icons/fa";
+import { FaBook, FaHistory, FaHome, FaPager, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import { SiCoursera } from "react-icons/si";
 import { MdSportsMartialArts } from "react-icons/md";
