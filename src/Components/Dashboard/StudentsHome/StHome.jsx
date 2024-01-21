@@ -15,11 +15,11 @@ const StHome = () => {
               jun-20-2024
             </div>
           </div>
-          <div className="flex gap-20 my-5 p-5 bg-gradient-to-r from-purple-600 to-pink-600">
+          <div className="md:flex gap-20 my-5 p-5 bg-gradient-to-r from-purple-600 to-pink-600">
             <div className="">
               <img
                 src={user.photoURL}
-                className="w-32 h-40 rounded-full"
+                className="w-40 md:h-40 rounded-full"
                 alt=""
               />
             </div>
