@@ -8,8 +8,8 @@ import { GiLoveMystery } from "react-icons/gi";
 const Dashboard = () => {
   return (
     <div>
-      <div className="flex gap-5">
-        <div className="w-64  min-h-full h-screen bg-gradient-to-t from-purple-600 to-pink-600">
+      <div className="md:flex md:gap-5">
+        <div className="md:w-64 h-full md:h-screen bg-gradient-to-t from-purple-600 to-pink-600">
           <ul className="menu p-5">
             <li className="text-white mb-2 uppercase">
               <NavLink to="/dashboard/studentHome">
