@@ -3,9 +3,11 @@ import { NavLink, Outlet } from "react-router-dom";
 import { SiCoursera } from "react-icons/si";
 import { MdSportsMartialArts } from "react-icons/md";
 import { GiLoveMystery } from "react-icons/gi";
+import UseCart from "../../Hooks/UseCart";
 
 
 const Dashboard = () => {
+  const [cart]=UseCart()
   return (
     <div>
       <div className="md:flex md:gap-5">
@@ -23,7 +25,7 @@ const Dashboard = () => {
             </li>
             <li className="text-white mb-2 uppercase">
               <NavLink to="/dashboard/cart">
-              <FaShoppingCart className="text-xl mr-2 "></FaShoppingCart> My Cart 
+              <FaShoppingCart className="text-xl mr-2 "></FaShoppingCart> My Cart <span className="text-yellow-500 text-lg">+{cart.length}</span>
               </NavLink>
             </li>
             <li className="text-white mb-2 uppercase">
