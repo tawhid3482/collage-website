@@ -4,8 +4,8 @@ const StHome = () => {
   const { user } = AuthHook();
   return (
     <div>
-      <div className="flex justify-between">
-        <div className="my-5">
+      <div className="flex-col lg:flex-row lg:flex lg:justify-between gap-5 ">
+        <div className="w-full my-5 border-2 p-2 border-green-500">
           <div className="flex justify-between  gap-20 items-center">
             <div className="">
               <p className="text-4xl font-bold">Dashboard</p>
@@ -29,7 +29,17 @@ const StHome = () => {
             </div>
           </div>
         </div>
-        <div className=""></div>
+        <div className=" lg:w-80 mx-auto border-2 my-5 border-green-500 p-5">
+          <p className=" text-2xl font-bold">My Profile</p>
+          <p className=" text-lg font-medium">date:</p>
+          <div className="">
+            <img src={user.photoURL} className="w-40 md:h-40 rounded-full my-5 ml-20 md:ml-36 lg:ml-10" alt="" />
+            <p className=" text-lg font-medium text-center">Name: {user.displayName}</p>
+            <p className=" text-lg font-medium text-center">Student Id: {user.displayName}</p>
+            <p className=" text-lg font-medium text-center">Department: {user.displayName}</p>
+
+          </div>
+        </div>
       </div>
     </div>
   );
