@@ -9,6 +9,7 @@ import {
 import AuthHook from "../Hooks/AuthHook";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import Google from "../SocialLogin/Google";
 
 const Login = () => {
   
@@ -124,6 +125,14 @@ const Login = () => {
             <div className="mb-5 text-center">
               <p>If you are not register member? </p>
               <p>Please <Link className="text-purple-600" to='/registration'>Sign up</Link></p>
+            </div>
+            <div className="flex justify-center items-center gap-5">
+              <hr className="w-20 border border-purple-600" />
+              <p className="text-xl font-medium">OR</p>
+              <hr className="w-20 border border-purple-600" />
+            </div>
+            <div className="text-center my-5">
+              <Google></Google>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Helmets from "../Helmets/Helmets";
 import Swal from "sweetalert2";
 import UseAxiosPublic from "../Hooks/UseAxiosPublic";
+import Google from "../SocialLogin/Google";
 
 const Registration = () => {
   const {
@@ -154,7 +155,9 @@ const Registration = () => {
               <p className="text-xl font-medium">OR</p>
               <hr className="w-20 border border-purple-600" />
             </div>
-            <div className=""></div>
+            <div className="text-center my-5">
+              <Google></Google>
+            </div>
           </div>
         </div>
       </div>
