@@ -1,12 +1,15 @@
 import { FaGoogle } from "react-icons/fa";
 import AuthHook from "../Hooks/AuthHook";
+import { useNavigate } from "react-router-dom";
 
 const Google = () => {
     const {googleLogin}=AuthHook()
+    const navigate = useNavigate()
     const handleGoogle = ()=>{
         googleLogin()
         .then(res =>{
             console.log(res.user)
+            navigate('/')
         })
     }
     return (
