@@ -30,7 +30,7 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
     signInUser(email,password)
     .then(result =>{
       const users = result.user
@@ -44,6 +44,16 @@ const Login = () => {
         timer: 1500
       });
      
+    })
+    .catch(error=>{
+
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Something wrong please try again",
+        showConfirmButton: false,
+        timer: 1500
+      });
     })
   };
 

@@ -78,8 +78,8 @@ const Routes = createBrowserRouter([
       {
         path:'cart',
         element:<MyCart></MyCart>
-      }
-      ,{
+      },
+      {
         path:'studentHome',
         element:<StHome></StHome>
       }
