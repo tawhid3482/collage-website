@@ -13,7 +13,7 @@ import { GiLoveMystery } from "react-icons/gi";
 import UseCart from "../../Hooks/UseCart";
 import { MdOutlineManageSearch } from "react-icons/md";
 
-// i am sorry i am seek
+// i am sorry 
 
 const Dashboard = () => {
   const isAdmin = true;
