@@ -1,63 +1,60 @@
+import { FaTrash } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
 const AllStudents = () => {
-    const data=useLoaderData()
-    console.log(data)
+  const data = useLoaderData();
 
-    return (
-        <div>
-            <div className="overflow-x-auto">
-  <table className="table">
-    {/* head */}
-    <thead>
-      <tr>
-        <th>
-          #
-        </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        data?.map((user,index)=><tr key={user._id}>
-        <th>
-          {index +1}
-        </th>
-        <td>
-          <div className="flex items-center gap-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img src={user.photoURL} alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            <div>
-              <div className="font-bold">Hart Hagerty</div>
-              <div className="text-sm opacity-50">United States</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Zemlak, Daniel and Leannon
-          <br/>
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-        </td>
-        <td>Purple</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
-      </tr>)
-      }
-      
-      
-    </tbody>
- 
-  </table>
-</div>
-        </div>
-    );
+  const handleDelete =()=>{
+    
+  }
+
+  return (
+    <div>
+      <div className="overflow-x-auto">
+        <table className="table">
+          {/* head */}
+          <thead className="text-lg font-bold">
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data?.map((user, index) => (
+              <tr key={user._id}>
+                <th>{index + 1}</th>
+                <td>
+                  <div className="flex items-center gap-3">
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img
+                          src={user?.photo}
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-bold">{user?.name}</div>
+                    </div>
+                  </div>
+                </td>
+                <td>{user?.email}</td>
+                <td>Student</td>
+                <th>
+                  <button onClick={handleDelete} className="btn ">
+                    <FaTrash className="text-2xl text-red-600"></FaTrash>
+                  </button>
+                </th>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 };
 
 export default AllStudents;
