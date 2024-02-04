@@ -87,7 +87,6 @@ const Routes = createBrowserRouter([
       {
         path:'allStudents',
         element:<AllStudents></AllStudents>,
-        loader:()=>fetch('http://localhost:5000/users')
       }
     ]
   }
