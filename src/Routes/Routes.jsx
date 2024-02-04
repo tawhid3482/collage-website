@@ -15,6 +15,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../Components/LayOut/Dashboard";
 import MyCart from "../Components/Dashboard/MYCart/MyCart";
 import StHome from "../Components/Dashboard/StudentsHome/StHome";
+import AllStudents from "../Components/Dashboard/AllStudents/AllStudents";
 
 const Routes = createBrowserRouter([
   {
@@ -82,6 +83,11 @@ const Routes = createBrowserRouter([
       {
         path:'studentHome',
         element:<StHome></StHome>
+      },
+      {
+        path:'allStudents',
+        element:<AllStudents></AllStudents>,
+        loader:()=>fetch('http://localhost:5000/users')
       }
     ]
   }

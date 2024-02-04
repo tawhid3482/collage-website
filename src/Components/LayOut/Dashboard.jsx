@@ -44,7 +44,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="text-white mb-2 uppercase">
-                  <NavLink to="/dashboard/allUser">
+                  <NavLink to="/dashboard/allStudents">
                     <FaUsers className="text-xl mr-2"></FaUsers> All Students
                   </NavLink>
                 </li>
