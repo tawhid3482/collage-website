@@ -37,7 +37,7 @@ useEffect(()=>{
     setUser(currentUser)
     // console.log(currentUser)
     if(currentUser){
-        
+        // do something
     }
     else{
         // do something
