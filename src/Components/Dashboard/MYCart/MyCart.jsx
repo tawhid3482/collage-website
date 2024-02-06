@@ -31,7 +31,6 @@ const MyCart = () => {
       }
     });
   };
-  // console.log(cart)
   const totalPrice = cart.reduce((total, item) => total + item.fee, 0);
   return (
     <div>
