@@ -1,17 +1,32 @@
 import { useQuery } from "@tanstack/react-query";
-import { FaTrash } from "react-icons/fa";
+import { FaTrash, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 
 const AllStudents = () => {
   const axiosSecure = UseAxiosSecure();
-  const { data } = useQuery({
+  const { data, refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
       const res = await axiosSecure.get("/users");
       return res.data;
     },
   });
+
+  const handleAdmin = (user) => {
+    axiosSecure.patch(`/users/admin/${user._id}`).then((res) => {
+      if (res.data.modifiedCount > 0) {
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
+  };
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -26,6 +41,7 @@ const AllStudents = () => {
       if (result.isConfirmed) {
         axiosSecure.delete(`/users/${id}`).then((res) => {
           if (res.data.deletedCount > 0) {
+            refetch();
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",
@@ -71,7 +87,18 @@ const AllStudents = () => {
                   </div>
                 </td>
                 <td>{user?.email}</td>
-                <td>Student</td>
+                <td>
+                  {user.role === "admin" ? (
+                    "admin"
+                  ) : (
+                    <button
+                      onClick={() => handleAdmin(user)}
+                      className="btn bg-purple-600 "
+                    >
+                      <FaUsers className="text-2xl text-white"></FaUsers>
+                    </button>
+                  )}
+                </td>
                 <th>
                   <button
                     onClick={() => handleDelete(user?._id)}
