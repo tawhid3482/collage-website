@@ -57,7 +57,7 @@ const AllStudents = () => {
     <div>
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
+         
           <thead className="text-lg font-bold">
             <tr>
               <th>#</th>
