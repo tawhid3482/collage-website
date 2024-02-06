@@ -1,19 +1,19 @@
-import {  useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 
 const AllStudents = () => {
-  const axiosSecure = UseAxiosSecure()
-  const {data} = useQuery({
-    queryKey:['users'],
-    queryFn:async()=>{
-      const res = await axiosSecure.get('/users')
+  const axiosSecure = UseAxiosSecure();
+  const { data } = useQuery({
+    queryKey: ["users"],
+    queryFn: async () => {
+      const res = await axiosSecure.get("/users");
       return res.data;
-  }});
+    },
+  });
 
-  const handleDelete =()=>{
-    
+  const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -21,17 +21,21 @@ const AllStudents = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success"
+        axiosSecure.delete(`/users/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
         });
       }
     });
-  }
+  };
 
   return (
     <div>
@@ -69,7 +73,10 @@ const AllStudents = () => {
                 <td>{user?.email}</td>
                 <td>Student</td>
                 <th>
-                  <button onClick={handleDelete} className="btn ">
+                  <button
+                    onClick={() => handleDelete(user?._id)}
+                    className="btn "
+                  >
                     <FaTrash className="text-2xl text-red-600"></FaTrash>
                   </button>
                 </th>
