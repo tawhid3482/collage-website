@@ -11,7 +11,7 @@ const UseAxiosSecure = () => {
   axiosSecure.interceptors.request.use(
     function (config) {
       const token = localStorage.getItem('access-token')
-      console.log('saikat',token)
+      // console.log('saikat',token)
       config.headers.authorization = `Bearer ${token}`
       // Do something before request is sent
       return config;
@@ -27,7 +27,7 @@ const UseAxiosSecure = () => {
    return response;
  }, async (error)=> {
    const status = error.response.status
-   console.log('error status',status)
+  //  console.log('error status',status)
    if( status === 401 || status === 403){
      await logoutUser()
       navigate('/login')

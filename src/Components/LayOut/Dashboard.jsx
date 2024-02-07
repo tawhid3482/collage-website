@@ -12,11 +12,12 @@ import { MdSportsMartialArts } from "react-icons/md";
 import { GiLoveMystery } from "react-icons/gi";
 import UseCart from "../../Hooks/UseCart";
 import { MdOutlineManageSearch } from "react-icons/md";
+import UseAdmin from "../../Hooks/UseAdmin";
 
 // i am sorry 
 
 const Dashboard = () => {
-  const isAdmin = true;
+  const [isAdmin] = UseAdmin()
   const isModerator = false;
   const [cart] = UseCart();
 
