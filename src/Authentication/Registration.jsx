@@ -44,10 +44,27 @@ const Registration = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-            }
+          }else{
+            Swal.fire({
+              position: "top-end",
+              icon: "error",
+              title: "Something wrong please try later",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+         
+
           });
         })
-        .catch((error) => console.log(error));
+        .catch((error) => 
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: `${error} Something wrong please try later`,
+          showConfirmButton: false,
+          timer: 1500,
+        }));
     });
   };
 
