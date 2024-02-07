@@ -6,6 +6,9 @@ const axiosSecure = axios.create({
 const UseAxiosSecure = () => {
   axiosSecure.interceptors.request.use(
     function (config) {
+      const token = localStorage.getItem('access-token')
+      console.log('saikat',token)
+      config.headers.authorization = `Bearer ${token}`
       // Do something before request is sent
       return config;
     },
@@ -14,6 +17,16 @@ const UseAxiosSecure = () => {
       return Promise.reject(error);
     }
   );
+
+  axiosSecure.interceptors.response.use(function (response) {
+   
+   return response;
+ }, function (error) {
+   console.log('error status',error)
+   
+   return Promise.reject(error);
+ });
+
   return axiosSecure;
 };
 
