@@ -59,7 +59,6 @@ const Routes = createBrowserRouter([
       {
         path:'news/:id',
         element:<NewsDetails></NewsDetails>,
-        // loader:()=>fetch('http://localhost:5000/news')
       },
       {
         path:"login",
