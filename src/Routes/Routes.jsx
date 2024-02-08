@@ -16,6 +16,7 @@ import Dashboard from "../Components/LayOut/Dashboard";
 import MyCart from "../Components/Dashboard/MYCart/MyCart";
 import StHome from "../Components/Dashboard/StudentsHome/StHome";
 import AllStudents from "../Components/Dashboard/AllStudents/AllStudents";
+import AdminRoutes from "./AdminRoutes";
 
 const Routes = createBrowserRouter([
   {
@@ -86,7 +87,7 @@ const Routes = createBrowserRouter([
       },
       {
         path:'allStudents',
-        element:<AllStudents></AllStudents>,
+        element:<AdminRoutes><AllStudents></AllStudents></AdminRoutes> ,
       }
     ]
   }
