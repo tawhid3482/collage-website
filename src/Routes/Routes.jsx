@@ -17,6 +17,7 @@ import MyCart from "../Components/Dashboard/MYCart/MyCart";
 import StHome from "../Components/Dashboard/StudentsHome/StHome";
 import AllStudents from "../Components/Dashboard/AllStudents/AllStudents";
 import AdminRoutes from "./AdminRoutes";
+import AddCourse from "../Components/Dashboard/AddCourse/AddCourse";
 
 const Routes = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const Routes = createBrowserRouter([
       {
         path:'allStudents',
         element:<AdminRoutes><AllStudents></AllStudents></AdminRoutes> ,
+      },
+      {
+        path:'addCourse',
+        element:<AdminRoutes><AddCourse></AddCourse></AdminRoutes>
       }
     ]
   }
