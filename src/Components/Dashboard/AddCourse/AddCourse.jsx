@@ -11,13 +11,12 @@ const AddCourse = () => {
       </div>
       <div className="">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label>First Name</label>
-          <input {...register("firstName")} />
-          <label>Gender Selection</label>
-          <select {...register("gender")}>
-            <option value="female">female</option>
-            <option value="male">male</option>
-            <option value="other">other</option>
+          <label>Subject Name</label>
+          <input {...register("SubjectName")} />
+          <select className="select select-primary w-full max-w-xs" {...register("Semester")}>
+            <option disabled selected value="1st">1st</option>
+            <option value="3rd">3rd</option>
+            <option value="5th">5th</option>
           </select>
           <input type="submit" />
         </form>
