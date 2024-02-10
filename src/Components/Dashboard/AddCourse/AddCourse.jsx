@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
+import { MdOutlineLibraryAdd } from "react-icons/md";
 
 const AddCourse = () => {
   const { register, handleSubmit } = useForm();
@@ -276,7 +277,10 @@ const AddCourse = () => {
             </label>
           </div>
 
-          <input type="submit" />
+         <div className="my-5 text-center">
+          <button className="btn btn-secondary uppercase">Add Course <MdOutlineLibraryAdd className="text-xl" />
+</button>
+         </div>
         </form>
       </div>
     </div>
