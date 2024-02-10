@@ -1,10 +1,26 @@
 import { useForm } from "react-hook-form";
 import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
 import { MdOutlineLibraryAdd } from "react-icons/md";
+import UseAxiosPublic from "../../../Hooks/UseAxiosPublic";
 
 const AddCourse = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+  const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
+
+  const axiosPublic = UseAxiosPublic();
+
+  const onSubmit = async (data) => {
+    // 1st img host
+    const imageFile = { image: data.image[0] };
+    const res = await axiosPublic.post(image_hosting_api,imageFile,{
+      headers:{
+        'content-type':'multipart/form-data'
+      }
+    });
+    console.log(res.data)
+  };
+
   return (
     <div>
       <div className="text-center">
@@ -60,12 +76,14 @@ const AddCourse = () => {
                   <span className="label-text">Semester*</span>
                 </div>
                 <select
+                  defaultValue="default"
                   className="select select-primary w-full "
                   {...register("semester")}
                 >
-                  <option disabled selected value="1st">
-                    1st
+                  <option disabled value="default">
+                    Select Your Semester
                   </option>
+                  <option value="1st">1st</option>
                   <option value="3rd">3rd</option>
                   <option value="5th">5th</option>
                 </select>
@@ -151,14 +169,16 @@ const AddCourse = () => {
                   <span className="label-text">Method*</span>
                 </div>
                 <select
+                  defaultValue="default"
                   className="select select-primary w-full "
                   {...register("method")}
                 >
-                  <option disabled selected value="1st">
-                    Online
+                  <option disabled value="default">
+                    Select Your Method
                   </option>
-                  <option value="3rd">Offline</option>
-                  <option value="5th">Online & Offline both</option>
+                  <option value="online">Online</option>
+                  <option value="offline">Offline</option>
+                  <option value="both">Online & Offline both</option>
                 </select>
               </label>
             </div>
@@ -262,7 +282,7 @@ const AddCourse = () => {
                 </div>
 
                 <input
-                {...register('insImage',{required:true})}
+                  {...register("insImage", { required: true })}
                   type="file"
                   className="file-input file-input-bordered file-input-secondary w-full "
                 />
@@ -277,7 +297,7 @@ const AddCourse = () => {
               </div>
 
               <input
-              {...register('image')}
+                {...register("image")}
                 type="file"
                 className="file-input file-input-bordered file-input-secondary w-full "
               />
