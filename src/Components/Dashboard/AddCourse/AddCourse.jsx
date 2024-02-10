@@ -84,7 +84,7 @@ const AddCourse = () => {
               </label>
             </div>
           </div>
-          
+
           <div className="flex gap-6">
             <div className=" w-full my-2">
               <label className="">
@@ -193,52 +193,87 @@ const AddCourse = () => {
                 <div className="label">
                   <span className="label-text">About Course Description*</span>
                 </div>
-               
+
                 <textarea
-                {...register("description1")}
-                className="textarea textarea-bordered w-full" placeholder="About Course Description"></textarea>
+                  {...register("description1")}
+                  className="textarea textarea-bordered w-full"
+                  placeholder="About Course Description"
+                ></textarea>
               </label>
             </div>
           </div>
           <div className="flex gap-6">
             <div className=" w-full my-2">
-            <label className=" "> 
+              <label className=" ">
                 <div className="label">
-                  <span className="label-text">About Course Finish Description*</span>
+                  <span className="label-text">
+                    About Course Finish Description*
+                  </span>
                 </div>
-               
+
                 <textarea
-                {...register("description2")}
-                className="textarea textarea-bordered w-full" placeholder="About Course Finish Description"></textarea>
+                  {...register("description2")}
+                  className="textarea textarea-bordered w-full"
+                  placeholder="About Course Finish Description"
+                ></textarea>
               </label>
             </div>
             <div className="w-full my-2">
               <label className=" ">
                 <div className="label">
-                  <span className="label-text">About Course Instructor Description*</span>
+                  <span className="label-text">
+                    About Course Instructor Description*
+                  </span>
                 </div>
-               
+
                 <textarea
-                {...register("description3")}
-                className="textarea textarea-bordered w-full" placeholder="About Course Instructor Description"></textarea>
+                  {...register("description3")}
+                  className="textarea textarea-bordered w-full"
+                  placeholder="About Course Instructor Description"
+                ></textarea>
               </label>
             </div>
           </div>
           <div className="flex gap-6">
             <div className=" w-full my-2">
-            <label className=" "> 
+              <label className=" ">
                 <div className="label">
-                  <span className="label-text">About Scholarship Description*</span>
+                  <span className="label-text">
+                    About Scholarship Description*
+                  </span>
                 </div>
-               
+
                 <textarea
-                {...register("scholarship")}
-                className="textarea textarea-bordered w-full" placeholder="About Scholarship Description"></textarea>
+                  {...register("scholarship")}
+                  className="textarea textarea-bordered w-full"
+                  placeholder="About Scholarship Description"
+                ></textarea>
               </label>
             </div>
-            <div className="w-full my-2">
-            
+            <div className=" w-full my-2">
+              <label className=" ">
+                <div className="label">
+                  <span className="label-text">Instructor Image*</span>
+                </div>
+
+                <input
+                  type="file"
+                  className="file-input file-input-bordered file-input-secondary w-full "
+                />
+              </label>
             </div>
+          </div>
+          <div className="form-control w-full">
+            <label className=" ">
+              <div className="label">
+                <span className="label-text">Course Image*</span>
+              </div>
+
+              <input
+                type="file"
+                className="file-input file-input-bordered file-input-secondary w-full "
+              />
+            </label>
           </div>
 
           <input type="submit" />
@@ -249,15 +284,6 @@ const AddCourse = () => {
 };
 
 export default AddCourse;
-
-
-
-
-
-
-
-
-
 
 // description4
 // "The MSc Finance (EG. Banking) deepens your understanding of banks and …"
