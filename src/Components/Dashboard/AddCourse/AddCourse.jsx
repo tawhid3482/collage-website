@@ -191,15 +191,53 @@ const AddCourse = () => {
             <div className="w-full my-2">
               <label className=" ">
                 <div className="label">
-                  <span className="label-text">About Course description*</span>
+                  <span className="label-text">About Course Description*</span>
                 </div>
-                <input
-                  {...register("courseId")}
-                  type="text"
-                  placeholder="Course id"
-                  className="input input-bordered w-full"
-                />
+               
+                <textarea
+                {...register("description1")}
+                className="textarea textarea-bordered w-full" placeholder="About Course Description"></textarea>
               </label>
+            </div>
+          </div>
+          <div className="flex gap-6">
+            <div className=" w-full my-2">
+            <label className=" "> 
+                <div className="label">
+                  <span className="label-text">About Course Finish Description*</span>
+                </div>
+               
+                <textarea
+                {...register("description2")}
+                className="textarea textarea-bordered w-full" placeholder="About Course Finish Description"></textarea>
+              </label>
+            </div>
+            <div className="w-full my-2">
+              <label className=" ">
+                <div className="label">
+                  <span className="label-text">About Course Instructor Description*</span>
+                </div>
+               
+                <textarea
+                {...register("description3")}
+                className="textarea textarea-bordered w-full" placeholder="About Course Instructor Description"></textarea>
+              </label>
+            </div>
+          </div>
+          <div className="flex gap-6">
+            <div className=" w-full my-2">
+            <label className=" "> 
+                <div className="label">
+                  <span className="label-text">About Scholarship Description*</span>
+                </div>
+               
+                <textarea
+                {...register("scholarship")}
+                className="textarea textarea-bordered w-full" placeholder="About Scholarship Description"></textarea>
+              </label>
+            </div>
+            <div className="w-full my-2">
+            
             </div>
           </div>
 
@@ -219,12 +257,8 @@ export default AddCourse;
 
 
 
-// description
-// "If you’re an educational professional who are looking to progress into…"
-// description2
-// "Provided by the KU Institute of Education, this programme is available…"
-// description3
-// "The MSc Finance (EG. Banking) deepens your understanding of banks and …"
+
+
 // description4
 // "The MSc Finance (EG. Banking) deepens your understanding of banks and …"
 
