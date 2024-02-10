@@ -28,7 +28,7 @@ const AddCourse = () => {
             <div className=" w-full my-2">
               <label className="">
                 <div className="label">
-                  <span className="label-text">Course fee*</span>
+                  <span className="label-text">Course Fee*</span>
                 </div>
                 <input
                   {...register("fee")}
@@ -61,7 +61,7 @@ const AddCourse = () => {
                 </div>
                 <select
                   className="select select-primary w-full "
-                  {...register("Semester")}
+                  {...register("semester")}
                 >
                   <option disabled selected value="1st">
                     1st
@@ -114,6 +114,7 @@ const AddCourse = () => {
               </label>
             </div>
           </div>
+
           <div className="flex gap-6">
             <div className=" w-full my-2">
               <label className="">
@@ -175,6 +176,7 @@ const AddCourse = () => {
               </label>
             </div>
           </div>
+
           <div className="flex gap-6">
             <div className=" w-full my-2">
               <label className="">
@@ -203,6 +205,7 @@ const AddCourse = () => {
               </label>
             </div>
           </div>
+
           <div className="flex gap-6">
             <div className=" w-full my-2">
               <label className=" ">
@@ -235,6 +238,7 @@ const AddCourse = () => {
               </label>
             </div>
           </div>
+
           <div className="flex gap-6">
             <div className=" w-full my-2">
               <label className=" ">
@@ -258,12 +262,14 @@ const AddCourse = () => {
                 </div>
 
                 <input
+                {...register('insImage',{required:true})}
                   type="file"
                   className="file-input file-input-bordered file-input-secondary w-full "
                 />
               </label>
             </div>
           </div>
+
           <div className="form-control w-full">
             <label className=" ">
               <div className="label">
@@ -271,16 +277,18 @@ const AddCourse = () => {
               </div>
 
               <input
+              {...register('image')}
                 type="file"
                 className="file-input file-input-bordered file-input-secondary w-full "
               />
             </label>
           </div>
 
-         <div className="my-5 text-center">
-          <button className="btn btn-secondary uppercase">Add Course <MdOutlineLibraryAdd className="text-xl" />
-</button>
-         </div>
+          <div className="my-5 text-center">
+            <button className="btn btn-secondary uppercase">
+              Add Course <MdOutlineLibraryAdd className="text-xl" />
+            </button>
+          </div>
         </form>
       </div>
     </div>
