@@ -319,10 +319,4 @@ const AddCourse = () => {
 
 export default AddCourse;
 
-// description4
-// "The MSc Finance (EG. Banking) deepens your understanding of banks and …"
 
-// img1
-// "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqUdeq3DMB_nVFh…"
-// img2
-// "https
