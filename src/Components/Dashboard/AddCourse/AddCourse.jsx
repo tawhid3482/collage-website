@@ -11,8 +11,10 @@ const AddCourse = () => {
   const axiosPublic = UseAxiosPublic();
 
   const onSubmit = async (data) => {
+    console.log(data)
     // 1st img host
-    const imageFile = { image: data.image[0] };
+    const imageFile = { image: data.image[0],
+      insImage: data.insImage };
     const res = await axiosPublic.post(image_hosting_api,imageFile,{
       headers:{
         'content-type':'multipart/form-data'
