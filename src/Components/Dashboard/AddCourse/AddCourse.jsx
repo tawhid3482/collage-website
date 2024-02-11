@@ -10,49 +10,31 @@ const AddCourse = () => {
 
   const axiosPublic = UseAxiosPublic();
 
-  // const onSubmit = async (data) => {
-  //   console.log(data)
-  //   // 1st img host
-  //   const imageFile = { image: data.image[0] };
-  //   const res = await axiosPublic.post(image_hosting_api,imageFile,{
-  //     headers:{
-  //       'content-type':'multipart/form-data'
-  //     }
-  //   });
-  //   console.log(res.data)
-
-  //   const imageFile2 = { insImage: data.insImage[0]};
-  //   const resImage2 = await axiosPublic.post(image_hosting_api, imageFile2,{
-  //     headers: {
-  //       'content-type': 'multipart/form-data'
-  //     }
-  //   });
-
-  //   console.log('Image 2 uploaded:', resImage2.data);
-
-
-  // };
-
-
   const onSubmit = async (data) => {
-    try {
-      const formData = new FormData();
-      formData.append('image', data.image[0]);
-      formData.append('insImage', data.insImage[0]);
-  
-      const res = await axiosPublic.post(image_hosting_api, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-  
-      console.log('Images uploaded:', res.data);
-  
-      // Add any additional logic after image upload
-    } catch (error) {
-      console.error('Error uploading images:', error);
-    }
+    console.log(data)
+    // 1st img host
+    const imageFile = { image: data.image[0] };
+    const res = await axiosPublic.post(image_hosting_api,imageFile,{
+      headers:{
+        'content-type':'multipart/form-data'
+      }
+    });
+    console.log(res.data)
+
+    const imageFile2 = { insImage: data.insImage[0]};
+    const resImage2 = await axiosPublic.post(image_hosting_api, imageFile2,{
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    });
+
+    console.log('Image 2 uploaded:', resImage2.data);
+
+
   };
+
+
+ 
   
 
 
