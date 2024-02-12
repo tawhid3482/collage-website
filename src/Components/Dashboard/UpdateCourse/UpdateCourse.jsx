@@ -8,7 +8,6 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateCourse = () => {
   const {name,_id} = useLoaderData();
-  console.log(course);
   const { register, handleSubmit } = useForm();
   const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
   const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
