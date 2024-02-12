@@ -48,7 +48,8 @@ const UpdateCourse = () => {
       };
       const courseRes = await axiosSecure.patch(`/department/${_id}`, courseItem);
       console.log(courseRes.data);
-      if (courseRes.data.insertedId) {
+      if (courseRes.data.modifiedCount > 0
+        ) {
         Swal.fire({
           position: "top-end",
           icon: "success",
