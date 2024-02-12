@@ -7,6 +7,7 @@ import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 const MyCart = () => {
   const [cart,refetch] = UseCart();
   const axiosSecure = UseAxiosSecure();
+  
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",

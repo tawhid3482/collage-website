@@ -2,9 +2,36 @@ import { FaTrash } from "react-icons/fa";
 import UseCourse from "../../../Hooks/UseCourse";
 import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
 import { GrUpdate } from "react-icons/gr";
+import Swal from "sweetalert2";
+import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 
 const ManageCourse = () => {
-  const [data] = UseCourse();
+  const [data,refetch] = UseCourse();
+  const axiosSecure = UseAxiosSecure()
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/department/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            refetch()
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+  };
   return (
     <div>
       <div className="text-center">
@@ -27,6 +54,7 @@ const ManageCourse = () => {
                 </th>
                 <th>Course Name</th>
                 <th>Instructor Name</th>
+                <th>fee</th>
                 <th>Update</th>
                 <th>Action</th>
               </tr>
@@ -62,9 +90,15 @@ const ManageCourse = () => {
                     {course.room}
                   </span>
                 </td>
+                <td>$ {course.fee}</td>
                 <td><button className="btn "><GrUpdate className="text-xl text-purple-600"></GrUpdate></button></td>
                 <th>
-                  <button className="btn "><FaTrash className="text-xl text-pink-600"></FaTrash ></button>
+                <button
+                    onClick={() => handleDelete(course._id)}
+                    className="btn"
+                  >
+                    <FaTrash className="text-xl text-pink-600"></FaTrash>
+                  </button>
                 </th>
               </tr>)}
              
