@@ -18,6 +18,7 @@ import StHome from "../Components/Dashboard/StudentsHome/StHome";
 import AllStudents from "../Components/Dashboard/AllStudents/AllStudents";
 import AdminRoutes from "./AdminRoutes";
 import AddCourse from "../Components/Dashboard/AddCourse/AddCourse";
+import ManageCourse from "../Components/Dashboard/ManageCourse/ManageCourse";
 
 const Routes = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const Routes = createBrowserRouter([
       {
         path:'addCourse',
         element:<AdminRoutes><AddCourse></AddCourse></AdminRoutes>
+      },
+      {
+        path:'manageCourse',
+        element:<AdminRoutes><ManageCourse></ManageCourse></AdminRoutes>
       }
     ]
   }
