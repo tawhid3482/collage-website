@@ -61,7 +61,7 @@ const ManageCourse = () => {
               </tr>
             </thead>
             <tbody>
-              {data?.map((course,index)=> <tr key={data._id}>
+              {data?.map((course,index)=> <tr key={data?._id}>
                 <th>
                   {index+1}
                 </th>

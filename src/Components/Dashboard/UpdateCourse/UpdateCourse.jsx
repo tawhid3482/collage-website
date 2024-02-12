@@ -4,10 +4,12 @@ import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import { useForm } from "react-hook-form";
 import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
-
+import { useLoaderData } from "react-router-dom";
 
 const UpdateCourse = () => {
-    const { register, handleSubmit } = useForm();
+  const {name,_id} = useLoaderData();
+  console.log(course);
+  const { register, handleSubmit } = useForm();
   const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
   const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
@@ -45,36 +47,35 @@ const UpdateCourse = () => {
         time: data.time,
         semester: data.semester,
       };
-      const courseRes = await axiosSecure.post("/department", courseItem);
+      const courseRes = await axiosSecure.patch(`/department/${_id}`, courseItem);
       console.log(courseRes.data);
-      if(courseRes.data.insertedId){
+      if (courseRes.data.insertedId) {
         Swal.fire({
           position: "top-end",
           icon: "success",
           title: "Your course has been updated",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
       }
     }
   };
 
-
-
-    return (
-        <div>
-            <div className="text-center">
+  return (
+    <div>
+      <div className="text-center">
         <SectionTitle title={"update your course"}></SectionTitle>
       </div>
       <div className="">
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className="form-control w-full my-2">
             <div className="label">
-              <span className="label-text">Course name*</span>
+              <span  className="label-text">Course name*</span>
             </div>
             <input
               {...register("name")}
               type="text"
+              defaultValue={name}
               placeholder="Course Name"
               className="input input-bordered w-full"
             />
@@ -347,13 +348,13 @@ const UpdateCourse = () => {
 
           <div className="my-5 text-center">
             <button className="btn btn-secondary uppercase">
-              Add Course <MdOutlineLibraryAdd className="text-xl" />
+              Update Course <MdOutlineLibraryAdd className="text-xl" />
             </button>
           </div>
         </form>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default UpdateCourse;

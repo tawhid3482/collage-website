@@ -101,7 +101,8 @@ const Routes = createBrowserRouter([
       },
       {
         path:'update/:id',
-        element:<AdminRoutes><UpdateCourse></UpdateCourse></AdminRoutes>
+        element:<AdminRoutes><UpdateCourse></UpdateCourse></AdminRoutes>,
+        loader:({params})=>fetch(`http://localhost:5000/department/${params.id}`)
       }
     ]
   }
