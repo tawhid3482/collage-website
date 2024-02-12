@@ -4,6 +4,7 @@ import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
 import { GrUpdate } from "react-icons/gr";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
+import { Link } from "react-router-dom";
 
 const ManageCourse = () => {
   const [data,refetch] = UseCourse();
@@ -91,7 +92,13 @@ const ManageCourse = () => {
                   </span>
                 </td>
                 <td>$ {course.fee}</td>
-                <td><button className="btn "><GrUpdate className="text-xl text-purple-600"></GrUpdate></button></td>
+
+                <td>
+                    <Link to={`/dashboard/update/${course._id}`}>
+                    <button className="btn "><GrUpdate className="text-xl text-purple-600"></GrUpdate></button>
+                    </Link>
+                </td>
+
                 <th>
                 <button
                     onClick={() => handleDelete(course._id)}

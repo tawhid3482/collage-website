@@ -1,12 +1,13 @@
-import { useForm } from "react-hook-form";
-import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
-import { MdOutlineLibraryAdd } from "react-icons/md";
+import Swal from "sweetalert2";
 import UseAxiosPublic from "../../../Hooks/UseAxiosPublic";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
-import Swal from "sweetalert2";
+import { MdOutlineLibraryAdd } from "react-icons/md";
+import { useForm } from "react-hook-form";
+import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
 
-const AddCourse = () => {
-  const { register, handleSubmit } = useForm();
+
+const UpdateCourse = () => {
+    const { register, handleSubmit } = useForm();
   const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
   const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
@@ -50,7 +51,7 @@ const AddCourse = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Your course has been added",
+          title: "Your course has been updated",
           showConfirmButton: false,
           timer: 1500
         });
@@ -58,10 +59,12 @@ const AddCourse = () => {
     }
   };
 
-  return (
-    <div>
-      <div className="text-center">
-        <SectionTitle title={"add new course"}></SectionTitle>
+
+
+    return (
+        <div>
+            <div className="text-center">
+        <SectionTitle title={"update your course"}></SectionTitle>
       </div>
       <div className="">
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -349,8 +352,8 @@ const AddCourse = () => {
           </div>
         </form>
       </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default AddCourse;
+export default UpdateCourse;

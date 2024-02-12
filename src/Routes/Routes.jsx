@@ -19,6 +19,7 @@ import AllStudents from "../Components/Dashboard/AllStudents/AllStudents";
 import AdminRoutes from "./AdminRoutes";
 import AddCourse from "../Components/Dashboard/AddCourse/AddCourse";
 import ManageCourse from "../Components/Dashboard/ManageCourse/ManageCourse";
+import UpdateCourse from "../Components/Dashboard/UpdateCourse/UpdateCourse";
 
 const Routes = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ const Routes = createBrowserRouter([
       {
         path:'manageCourse',
         element:<AdminRoutes><ManageCourse></ManageCourse></AdminRoutes>
+      },
+      {
+        path:'update/:id',
+        element:<AdminRoutes><UpdateCourse></UpdateCourse></AdminRoutes>
       }
     ]
   }
