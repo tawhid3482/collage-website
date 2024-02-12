@@ -11,33 +11,50 @@ const AddCourse = () => {
   const axiosPublic = UseAxiosPublic();
 
   const onSubmit = async (data) => {
-    console.log(data)
+    console.log(data);
     // 1st img host
-    const imageFile = { image: data.image[0] };
-    const res = await axiosPublic.post(image_hosting_api,imageFile,{
-      headers:{
-        'content-type':'multipart/form-data'
-      }
-    });
-    console.log(res.data)
-
-    const imageFile2 = { insImage: data.insImage[0]};
-    const resImage2 = await axiosPublic.post(image_hosting_api, imageFile2,{
+    const imageFile = { image: data.image[0],
+      Image: data.insImage[0], };
+    const res = await axiosPublic.post(image_hosting_api, imageFile, {
       headers: {
-        'content-type': 'multipart/form-data'
-      }
+        "content-type": "multipart/form-data",
+      },
     });
+    console.log(res.data);
 
-    console.log('Image 2 uploaded:', resImage2.data);
+  //   const imageFile2 = {  };
+  //   const resImage2 = await axiosPublic.post(image_hosting_api, imageFile2, {
+  //     headers: {
+  //       "content-type": "multipart/form-data",
+  //     },
+  //   });
 
+  //   console.log(resImage2.data);
+  if(res.data.success){
+const courseItem = {
+  name:data.name,
+  campus:data.campus,
+  courseId:data.courseId,
+  credit:data.credit,
+  dateRange:data.dateRange,
+  department:data.department,
+  description1:data.description1,
+  description2:data.description2,
+  description3:data.description3,
+  fee:data.fee,
+  image:data.image,
+  insImage:data.insImage,
+  instructor:data.instructor,
+  level:data.level,
+  method:data.method,
+  scholarship:data.scholarship,
+  time:data.time,
+  semester: data.semester
 
-  };
+}
+  }
 
-
- 
-  
-
-
+   };
 
   return (
     <div>
@@ -334,5 +351,3 @@ const AddCourse = () => {
 };
 
 export default AddCourse;
-
-
