@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import UseAxiosPublic from "../../../Hooks/UseAxiosPublic";
+import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
+import Swal from "sweetalert2";
 
 const AddCourse = () => {
   const { register, handleSubmit } = useForm();
@@ -9,12 +11,12 @@ const AddCourse = () => {
   const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
   const axiosPublic = UseAxiosPublic();
+  const axiosSecure = UseAxiosSecure();
 
   const onSubmit = async (data) => {
     console.log(data);
     // 1st img host
-    const imageFile = { image: data.image[0],
-      Image: data.insImage[0], };
+    const imageFile = { image: data.image[0], Image: data.insImage[0] };
     const res = await axiosPublic.post(image_hosting_api, imageFile, {
       headers: {
         "content-type": "multipart/form-data",
@@ -22,39 +24,48 @@ const AddCourse = () => {
     });
     console.log(res.data);
 
-  //   const imageFile2 = {  };
-  //   const resImage2 = await axiosPublic.post(image_hosting_api, imageFile2, {
-  //     headers: {
-  //       "content-type": "multipart/form-data",
-  //     },
-  //   });
+    //   const imageFile2 = {  };
+    //   const resImage2 = await axiosPublic.post(image_hosting_api, imageFile2, {
+    //     headers: {
+    //       "content-type": "multipart/form-data",
+    //     },
+    //   });
 
-  //   console.log(resImage2.data);
-  if(res.data.success){
-const courseItem = {
-  name:data.name,
-  campus:data.campus,
-  courseId:data.courseId,
-  credit:data.credit,
-  dateRange:data.dateRange,
-  department:data.department,
-  description1:data.description1,
-  description2:data.description2,
-  description3:data.description3,
-  fee:data.fee,
-  image:data.image,
-  insImage:data.insImage,
-  instructor:data.instructor,
-  level:data.level,
-  method:data.method,
-  scholarship:data.scholarship,
-  time:data.time,
-  semester: data.semester
-
-}
-  }
-
-   };
+    //   console.log(resImage2.data);
+    if (res.data.success) {
+      const courseItem = {
+        name: data.name,
+        campus: data.campus,
+        courseId: data.courseId,
+        credit: data.credit,
+        dateRange: data.dateRange,
+        department: data.department,
+        description1: data.description1,
+        description2: data.description2,
+        description3: data.description3,
+        fee: parseFloat(data.fee),
+        image: res.data.data.display_url,
+        insImage: data.insImage,
+        instructor: data.instructor,
+        level: data.level,
+        method: data.method,
+        scholarship: data.scholarship,
+        time: data.time,
+        semester: data.semester,
+      };
+      const courseRes = await axiosSecure.post("/department", courseItem);
+      console.log(courseRes.data);
+      if(courseRes.data.insertedId){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your course has been added",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    }
+  };
 
   return (
     <div>
@@ -317,9 +328,10 @@ const courseItem = {
                 </div>
 
                 <input
-                  {...register("insImage", { required: true })}
-                  type="file"
-                  className="file-input file-input-bordered file-input-secondary w-full "
+                  {...register("insImage")}
+                  type="text"
+                  placeholder="Instructor Image URL"
+                  className="input input-bordered w-full"
                 />
               </label>
             </div>
