@@ -3,7 +3,7 @@ import SectionTitle from "../../Shayed/SectionTitle/SectionTitle";
 import { Elements } from "@stripe/react-stripe-js";
 
 const Payment = () => {
-  const stripePromise = loadStripe("");
+  const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_KEY);
   return (
     <div>
       <div className="text-center">
