@@ -3,6 +3,7 @@ import UseCart from "../../../Hooks/UseCart";
 import Button from "../../Shayed/Button";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
   const [cart,refetch] = UseCart();
@@ -38,7 +39,9 @@ const MyCart = () => {
       <div className="flex justify-between items-center my-4">
         <p className="text-4xl font-bold">Total Course: {cart?.length}</p>
         <p className="text-4xl font-bold">Total Fee: {totalPrice}</p>
-        <Button text={"Pay"}></Button>
+        <Link to='/dashboard/payment'>
+          <button disabled={!cart.length} className="btn bg-purple-500 text-white text-lg uppercase">Pay</button>
+          </Link>
       </div>
 
       <div className="overflow-x-auto">
