@@ -1,6 +1,5 @@
 import { FaTrash } from "react-icons/fa";
 import UseCart from "../../../Hooks/UseCart";
-import Button from "../../Shayed/Button";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 import { Link } from "react-router-dom";
