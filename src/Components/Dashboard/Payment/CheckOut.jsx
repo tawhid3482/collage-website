@@ -7,11 +7,20 @@ const CheckOut = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!stripe || !elements) {
-      return;
+      return
     }
     const card = elements.getElement(CardElement)
     if(card == null){
         return
+    }
+    const {error,paymentMethod}= await stripe.createPaymentMethod({
+        type:'card',
+        card
+    })
+    if(error){
+        console.log('payment error',error)
+    }else{
+        console.log('payment method',paymentMethod)
     }
   };
 
@@ -36,7 +45,7 @@ const CheckOut = () => {
             },
           }}
         />
-        ;
+         <button disabled={!stripe} type="submit" className="btn btn-sm my-3 bg-purple-600 text-white text-lg">Pay</button>
       </form>
     </div>
   );
