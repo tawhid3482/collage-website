@@ -35,12 +35,12 @@ const CheckOut = () => {
             style: {
               base: {
                 iconColor: "#c4f0ff",
-                color: "#fff",
+                color: "#444444",
                 fontSize: "16px",
               },
               invalid: {
-                iconColor: "#FFC7EE",
-                color: "#FFC7EE",
+                iconColor: "#990000",
+                color: "#990000",
               },
             },
           }}
