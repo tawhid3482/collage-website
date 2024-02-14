@@ -8,6 +8,7 @@ const CheckOut = () => {
   const { user } = AuthHook();
   const [error, setError] = useState();
   const [clientSecret, setClientSecret] = useState("");
+  const [transactionId, settransactionId] = useState("");
   const stripe = useStripe();
   const elements = useElements();
   const [cart] = UseCart();
@@ -59,8 +60,12 @@ const CheckOut = () => {
       console.log("confirmEroor khau");
     }  else {
       console.log(paymentIntent);
+      if (paymentIntent.status === "succeeded") {
+        console.log("transaction id", paymentIntent.id);
+        settransactionId(paymentIntent.id);
     }
   }
+}
 
   return (
     <div>
@@ -95,6 +100,9 @@ const CheckOut = () => {
           Pay
         </button>
         <p className="text-red-600">{error}</p>
+        {transactionId && (
+        <p className="text-green-500">Your Transaction Id: {transactionId}</p>
+      )}
       </form>
     </div>
   );
