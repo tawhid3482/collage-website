@@ -5,16 +5,19 @@ import UseCart from "../../../Hooks/UseCart";
 
 const CheckOut = () => {
   const [error, setError] = useState();
-  const [clientSecret,setClientSecret]=useState()
+  const [clientSecret, setClientSecret] = useState('');
   const stripe = useStripe();
   const elements = useElements();
-  const axiosSecure = UseAxiosSecure();
   const [cart] = UseCart();
-  const totalPrice = cart.reduce((total, item) => total + item, 0);
+
+  const totalPrice = cart?.reduce((total, item) => total + item, 0);
+  const axiosSecure = UseAxiosSecure();
+
   useEffect(() => {
-    axiosSecure.post("/create-payment-intent", { totalPrice }).then((res) => {
-      // console.log(res.data.clientSecret);
-      setClientSecret(res.data.clientSecret)
+    axiosSecure.post("/create-payment-intent", {price: totalPrice })
+    .then((res) => {
+      console.log(res.data.clientSecret);
+      setClientSecret(res.data.clientSecret);
     });
   }, [axiosSecure, totalPrice]);
 
