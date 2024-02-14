@@ -1,30 +1,42 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
+import UseCart from "../../../Hooks/UseCart";
 
 const CheckOut = () => {
-  const [error,setError]=useState()
+  const [error, setError] = useState();
+  const [clientSecret,setClientSecret]=useState()
   const stripe = useStripe();
   const elements = useElements();
+  const axiosSecure = UseAxiosSecure();
+  const [cart] = UseCart();
+  const totalPrice = cart.reduce((total, item) => total + item, 0);
+  useEffect(() => {
+    axiosSecure.post("/create-payment-intent", { totalPrice }).then((res) => {
+      // console.log(res.data.clientSecret);
+      setClientSecret(res.data.clientSecret)
+    });
+  }, [axiosSecure, totalPrice]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!stripe || !elements) {
-      return
+      return;
     }
-    const card = elements.getElement(CardElement)
-    if(card == null){
-        return
+    const card = elements.getElement(CardElement);
+    if (card == null) {
+      return;
     }
-    const {error,paymentMethod}= await stripe.createPaymentMethod({
-        type:'card',
-        card
-    })
-    if(error){
-        console.log('payment error',error)
-        setError(error.message)
-    }else{
-        console.log('payment method',paymentMethod)
-        setError('')
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card,
+    });
+    if (error) {
+      console.log("payment error", error);
+      setError(error.message);
+    } else {
+      console.log("payment method", paymentMethod);
+      setError("");
     }
   };
 
@@ -49,10 +61,14 @@ const CheckOut = () => {
             },
           }}
         />
-         <button disabled={!stripe} type="submit" className="btn btn-sm my-3 bg-purple-600 text-white text-lg">
+        <button
+          disabled={!stripe || !clientSecret}
+          type="submit"
+          className="btn btn-sm my-3 bg-purple-600 text-white text-lg"
+        >
           Pay
-          </button>
-          <p className="text-red-600">{error}</p>
+        </button>
+        <p className="text-red-600">{error}</p>
       </form>
     </div>
   );
