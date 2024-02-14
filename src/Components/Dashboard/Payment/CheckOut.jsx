@@ -5,13 +5,12 @@ import UseCart from "../../../Hooks/UseCart";
 import AuthHook from "../../../Hooks/AuthHook";
 
 const CheckOut = () => {
-  const {user}=AuthHook()
+  const { user } = AuthHook();
   const [error, setError] = useState();
-  const [clientSecret, setClientSecret] = useState('');
+  const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
   const elements = useElements();
   const [cart] = UseCart();
-console.log(cart)
   const totalPrice = cart?.reduce((total, item) => total + item.fee, 0);
   const axiosSecure = UseAxiosSecure();
 
@@ -46,24 +45,29 @@ console.log(cart)
       console.log("payment method", paymentMethod);
       setError("");
     }
-    const {paymentIntent,error:confirmError}= await stripe.comfirmCardPayment(clientSecret,{
-      payment_Method: {
-        card:card,
-        billing_details:{
-          email:user.email || 'anonymous',
-          name:user.displayName || 'anonymous'
-        }
-      }
-    })
-    if(confirmError){
-      console.log(confirmError)
-    }else{
-      console.log(paymentIntent)
+    const { paymentIntent, error: confirmError } =
+      await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+          billing_details: {
+            email: user?.email || "anonymous",
+            name: user?.displayName || "anonymous",
+          },
+        },
+      });
+     if (confirmError) {
+      console.log("confirmEroor khau");
+    }  else {
+      console.log(paymentIntent);
     }
-  };
+  }
 
   return (
     <div>
+      <div className="">
+        <p className="text-xl font-bold text-purple-600 text-right ml-10 my-4">Your Fee: <span className="text-pink-500">${totalPrice}</span></p>
+      </div>
+
       <form onSubmit={handleSubmit}>
         <CardElement
           id="my-card"
