@@ -14,8 +14,6 @@ import UseCart from "../../Hooks/UseCart";
 import { MdOutlineManageSearch } from "react-icons/md";
 import UseAdmin from "../../Hooks/UseAdmin";
 
-// i am sorry 
-
 const Dashboard = () => {
   const [isAdmin] = UseAdmin()
   const isModerator = false;
@@ -26,6 +24,7 @@ const Dashboard = () => {
       <div className="md:flex md:gap-5">
         <div className="md:w-64 h-full md:h-screen bg-gradient-to-t from-purple-600 to-pink-600">
           <ul className="menu p-5">
+            {/* admin panel */}
             {isAdmin && (
               <>
                 <li className="text-white mb-2 uppercase">
@@ -51,7 +50,7 @@ const Dashboard = () => {
                 </li>
               </>
             )}
-
+                {/* for moderator */}
             {isModerator && (
               <>
                 <li className="text-white mb-2 uppercase">
