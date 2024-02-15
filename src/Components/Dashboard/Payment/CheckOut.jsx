@@ -4,7 +4,6 @@ import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 import UseCart from "../../../Hooks/UseCart";
 import AuthHook from "../../../Hooks/AuthHook";
 import { useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
 const CheckOut = () => {

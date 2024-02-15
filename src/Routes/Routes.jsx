@@ -21,6 +21,7 @@ import AddCourse from "../Components/Dashboard/AddCourse/AddCourse";
 import ManageCourse from "../Components/Dashboard/ManageCourse/ManageCourse";
 import UpdateCourse from "../Components/Dashboard/UpdateCourse/UpdateCourse";
 import Payment from "../Components/Dashboard/Payment/Payment";
+import PaymentHistory from "../Components/Dashboard/PaymentHistory/PaymentHistory";
 
 const Routes = createBrowserRouter([
   {
@@ -34,83 +35,107 @@ const Routes = createBrowserRouter([
       },
       {
         path: "admission",
-        element:<Admission></Admission>,
-        loader:()=>fetch('http://localhost:5000/application')
+        element: <Admission></Admission>,
+        loader: () => fetch("http://localhost:5000/application"),
       },
       {
-        path:"page",
-        element:<Page></Page>,
+        path: "page",
+        element: <Page></Page>,
       },
       {
-        path:"course",
-        element:<Courses></Courses>,
-        loader:()=>fetch('http://localhost:5000/department')
+        path: "course",
+        element: <Courses></Courses>,
+        loader: () => fetch("http://localhost:5000/department"),
       },
       {
-        path:"course/:id",
-        element:<PrivateRoutes><CourseDetails></CourseDetails></PrivateRoutes> ,
-        loader:()=>fetch('http://localhost:5000/department')
+        path: "course/:id",
+        element: (
+          <PrivateRoutes>
+            <CourseDetails></CourseDetails>
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("http://localhost:5000/department"),
       },
       {
-        path:"athletics",
-        element:<Athletics></Athletics>,
+        path: "athletics",
+        element: <Athletics></Athletics>,
       },
       {
-        path:"university",
-        element:<UnivercityLife></UnivercityLife>,
-        loader:()=>fetch('http://localhost:5000/uniEvents')
+        path: "university",
+        element: <UnivercityLife></UnivercityLife>,
+        loader: () => fetch("http://localhost:5000/uniEvents"),
       },
       {
-        path:'news/:id',
-        element:<NewsDetails></NewsDetails>,
+        path: "news/:id",
+        element: <NewsDetails></NewsDetails>,
       },
       {
-        path:"login",
-        element:<Login></Login>
+        path: "login",
+        element: <Login></Login>,
       },
       {
-        path:"registration",
-        element:<Registration></Registration>
+        path: "registration",
+        element: <Registration></Registration>,
       },
-     
     ],
   },
   {
-    path:'dashboard',
-    element:<Dashboard></Dashboard>,
-    errorElement:<Errorpage></Errorpage>,
-    children:[
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    errorElement: <Errorpage></Errorpage>,
+    children: [
       {
-        path:'cart',
-        element:<MyCart></MyCart>
+        path: "cart",
+        element: <MyCart></MyCart>,
       },
       {
-        path:'studentHome',
-        element:<StHome></StHome>
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>,
       },
       {
-        path:'payment',
-        element:<Payment></Payment>
+        path: "studentHome",
+        element: <StHome></StHome>,
       },
       {
-        path:'allStudents',
-        element:<AdminRoutes><AllStudents></AllStudents></AdminRoutes> ,
+        path: "payment",
+        element: <Payment></Payment>,
       },
       {
-        path:'addCourse',
-        element:<AdminRoutes><AddCourse></AddCourse></AdminRoutes>
+        path: "allStudents",
+        element: (
+          <AdminRoutes>
+            <AllStudents></AllStudents>
+          </AdminRoutes>
+        ),
       },
       {
-        path:'manageCourse',
-        element:<AdminRoutes><ManageCourse></ManageCourse></AdminRoutes>
+        path: "addCourse",
+        element: (
+          <AdminRoutes>
+            <AddCourse></AddCourse>
+          </AdminRoutes>
+        ),
       },
       {
-        path:'update/:id',
-        element:<AdminRoutes><UpdateCourse></UpdateCourse></AdminRoutes>,
-        loader:({params})=>fetch(`http://localhost:5000/department/${params.id}`)
-      }
-    ]
-  }
+        path: "manageCourse",
+        element: (
+          <AdminRoutes>
+            <ManageCourse></ManageCourse>
+          </AdminRoutes>
+        ),
+      },
+      {
+        path: "update/:id",
+        element: (
+          <AdminRoutes>
+            <UpdateCourse></UpdateCourse>
+          </AdminRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/department/${params.id}`),
+      },
+    ],
+  },
 ]);
 
 export default Routes;
