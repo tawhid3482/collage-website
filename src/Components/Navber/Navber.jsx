@@ -54,7 +54,7 @@ const Navber = () => {
                 user && isAdmin ? <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
                 <Link to='/dashboard/adminHome'>Dashboard</Link>
               </li> : <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
-              <Link to='/dashboard/stHome'>Dashboard</Link>
+              <Link to='/dashboard/studentHome'>Dashboard</Link>
             </li>
               }
               <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg" onClick={logoutUser}>
