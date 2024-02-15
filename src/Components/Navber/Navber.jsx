@@ -5,10 +5,12 @@ import NavRoutes from "./NavRoutes";
 import logo from "../../assets/collage.jpg";
 import AuthHook from "../../Hooks/AuthHook";
 import { Link } from "react-router-dom";
+import UseAdmin from "../../Hooks/UseAdmin";
 
 const Navber = () => {
   const [openMenu, setMenu] = useState(false);
   const { user, logoutUser } = AuthHook();
+  const [isAdmin]= UseAdmin()
   const routes = [
     { path: "/", name: "Home" },
     { path: "/admission", name: "Admission" },
@@ -48,9 +50,13 @@ const Navber = () => {
               <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
                 <p className="">{user?.displayName}</p>
               </li>
-              <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
-                <Link to='/dashboard'>Dashboard</Link>
-              </li>
+              {
+                user && isAdmin ? <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
+                <Link to='/dashboard/adminHome'>Dashboard</Link>
+              </li> : <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg">
+              <Link to='/dashboard/stHome'>Dashboard</Link>
+            </li>
+              }
               <li className="hover:bg-gradient-to-t hover:from-pink-600 hover:to-purple-600 rounded-lg" onClick={logoutUser}>
                 <Link>Logout</Link>
               </li>

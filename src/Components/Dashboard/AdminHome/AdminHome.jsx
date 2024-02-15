@@ -4,7 +4,11 @@ const AdminHome = () => {
     const {user} = AuthHook()
     return (
         <div>
-            <h2 className="text-3xl font-bold">Hi,welcome back {user.displayName}</h2>
+            <h2 className="text-3xl my-2 font-bold">Hi,welcome <span>
+                {
+                    user ? user.displayName : 'back'
+                }
+                </span> </h2>
         </div>
     );
 };
