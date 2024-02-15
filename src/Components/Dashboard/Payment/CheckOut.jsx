@@ -78,7 +78,7 @@ const CheckOut = () => {
       const res = await axiosSecure.post("/payments", payment);
       console.log("payment save", res.data);
       refetch();
-      if (res.data?.paymentResult?.insertedId) {
+      if (res.data?.paymentResults?.insertedId) {
         Swal.fire({
           position: "top-end",
           icon: "success",
