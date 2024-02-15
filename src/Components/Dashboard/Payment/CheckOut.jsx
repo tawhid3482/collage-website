@@ -5,6 +5,7 @@ import UseCart from "../../../Hooks/UseCart";
 import AuthHook from "../../../Hooks/AuthHook";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const CheckOut = () => {
   const { user } = AuthHook();
@@ -79,7 +80,13 @@ const CheckOut = () => {
       console.log("payment save", res.data);
       refetch();
       if (res.data?.paymentResult?.insertedId) {
-        toast.success("Payment Successful");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your Payment successfully done",
+          showConfirmButton: false,
+          timer: 1500
+        });
         navigate("/dashboard/paymentHistory");
       }
     }
