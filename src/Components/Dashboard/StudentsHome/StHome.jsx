@@ -1,4 +1,5 @@
 import AuthHook from "../../../Hooks/AuthHook";
+import StCourse from "../../../Hooks/StCourse";
 
 const StHome = () => {
   const { user } = AuthHook();
@@ -6,12 +7,12 @@ const StHome = () => {
 const currentDate = new Date();
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = currentDate.toLocaleDateString(undefined, options);
-
+const [clas]=StCourse()
 
   return (
     <div>
       <div className="flex-col lg:flex-row lg:flex lg:justify-between gap-5 ">
-        <div className="w-full my-5 border-2 p-2 border-green-500">
+        <div className="w-full my-5  p-2 ">
           <div className="flex justify-between  gap-20 items-center">
             <div className="">
               <p className="text-4xl font-bold">Dashboard</p>
@@ -40,9 +41,14 @@ const formattedDate = currentDate.toLocaleDateString(undefined, options);
           <h2 className="text-lg font-medium">date: {formattedDate}</h2>
           <div className="">
             <img src={user?.photoURL} className="w-40 md:h-40 rounded-full my-5 ml-20 md:ml-36 lg:ml-10" alt="" />
-            <p className=" text-lg font-medium text-center">Name: {user?.displayName}</p>
-            <p className=" text-lg font-medium text-center">Student Id: {user?.displayName}</p>
-            <p className=" text-lg font-medium text-center">Department: {user?.displayName}</p>
+            {
+              clas?.map(course =><div key={course._id}>
+                <p className=" text-lg font-medium text-center">Name: {user?.displayName}</p>
+            <p className=" text-lg font-medium text-center">Student Id: {course._id}</p>
+            <p className=" text-lg font-medium text-center">Course Id: {course.courseId}</p>
+            <p className=" text-lg font-medium text-center">Department: {course.Department}</p>
+              </div>)
+            }
 
           </div>
         </div>

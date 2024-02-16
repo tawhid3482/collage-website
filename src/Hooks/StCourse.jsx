@@ -3,7 +3,7 @@ import UseAxiosSecure from "./UseAxiosSecure";
 
 const StCourse = () => {
   const axiosSecure = UseAxiosSecure();
-  const { data: clas } = useQuery({
+  const { data: clas, refetch } = useQuery({
     queryKey: ["myCourse"],
     queryFn: async () => {
       const res = await axiosSecure.get("/myCourse");
@@ -11,7 +11,7 @@ const StCourse = () => {
     },
     
   });
-  return [clas]
+  return [clas,refetch]
 };
 
 export default StCourse;
