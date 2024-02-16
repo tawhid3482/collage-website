@@ -19,6 +19,9 @@ const MyCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
+        axiosSecure.delete(`/myCourse/${id}`).then((res)=>{
+          console.log(res.data)
+        })
         axiosSecure.delete(`/carts/${id}`).then((res) => {
           if (res.data.deletedCount > 0) {
             refetch()
@@ -29,6 +32,7 @@ const MyCart = () => {
             });
           }
         });
+        
       }
     });
   };
@@ -57,6 +61,7 @@ const MyCart = () => {
             </tr>
           </thead>
           <tbody>
+          
             {cart?.map((item, index) => (
               <tr key={item?._id}>
                 <th>{index + 1}</th>
