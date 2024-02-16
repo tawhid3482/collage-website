@@ -45,7 +45,7 @@ const Login = () => {
       });
      
     })
-    .catch(error=>{
+    .catch((error) =>{
 
       Swal.fire({
         position: "top-end",
@@ -128,7 +128,7 @@ const Login = () => {
                   type="submit"
                   className="btn text-transparent bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:text-black hover:bg-gray-600"
                   value="Login"
-                  disabled={false}
+                  disabled={disabled}
                 />
               </div>
             </form>

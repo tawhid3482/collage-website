@@ -66,7 +66,7 @@ const AdminHome = () => {
           </div>
           <div className="">
             <p className="text-5xl font-bold">{stats?.course}</p>
-            <p className="text-2xl font-bold">Contests</p>
+            <p className="text-2xl font-bold">Course</p>
           </div>
         </div>
         

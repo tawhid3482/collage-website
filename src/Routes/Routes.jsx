@@ -38,7 +38,7 @@ const Routes = createBrowserRouter([
       {
         path: "admission",
         element: <Admission></Admission>,
-        loader: () => fetch("http://localhost:5000/application"),
+        loader: () => fetch("https://collage-website-server.vercel.app/application"),
       },
       {
         path: "page",
@@ -47,7 +47,7 @@ const Routes = createBrowserRouter([
       {
         path: "course",
         element: <Courses></Courses>,
-        loader: () => fetch("http://localhost:5000/department"),
+        loader: () => fetch("https://collage-website-server.vercel.app/department"),
       },
       {
         path: "course/:id",
@@ -56,7 +56,7 @@ const Routes = createBrowserRouter([
             <CourseDetails></CourseDetails>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/department"),
+        loader: () => fetch("https://collage-website-server.vercel.app/department"),
       },
       {
         path: "athletics",
@@ -65,7 +65,7 @@ const Routes = createBrowserRouter([
       {
         path: "university",
         element: <UnivercityLife></UnivercityLife>,
-        loader: () => fetch("http://localhost:5000/uniEvents"),
+        loader: () => fetch("https://collage-website-server.vercel.app/uniEvents"),
       },
       {
         path: "news/:id",
@@ -142,7 +142,7 @@ const Routes = createBrowserRouter([
           </AdminRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/department/${params.id}`),
+          fetch(`https://collage-website-server.vercel.app/department/${params.id}`),
       },
     ],
   },
