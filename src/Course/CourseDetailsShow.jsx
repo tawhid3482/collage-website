@@ -26,9 +26,9 @@ const CourseDetailsShow = ({ course }) => {
   const navigate = useNavigate()
   const {user}=AuthHook()
   const axiosSecure = UseAxiosSecure()
+
   const handleFee = () => {
     // console.log(cl);
- 
     if(user && user.email){
 
       const cartItem ={
@@ -41,7 +41,7 @@ const CourseDetailsShow = ({ course }) => {
         fee,
 
       }
-      axiosSecure.post('carts',cartItem)
+      axiosSecure.post('/carts',cartItem)
       .then(res =>{
         // console.log(res.data)
         if(res.data.insertedId){
@@ -54,6 +54,10 @@ const CourseDetailsShow = ({ course }) => {
           });
         }
         navigate('/dashboard/cart')
+      })
+      axiosSecure.post('/myCourse',cartItem)
+      .then((res)=>{
+        console.log(res)
       })
 
     } 

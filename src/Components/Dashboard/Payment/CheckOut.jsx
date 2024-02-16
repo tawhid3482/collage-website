@@ -17,6 +17,7 @@ const CheckOut = () => {
   const totalPrice = cart?.reduce((total, item) => total + item.fee, 0);
   const axiosSecure = UseAxiosSecure();
   const navigate = useNavigate();
+
   useEffect(() => {
     if (totalPrice > 0) {
       axiosSecure
@@ -26,9 +27,13 @@ const CheckOut = () => {
           setClientSecret(res.data.clientSecret);
         });
     }
+   
   }, [axiosSecure, totalPrice]);
 
   const handleSubmit = async (event) => {
+
+    
+
     event.preventDefault();
     if (!stripe || !elements) {
       return;
@@ -84,10 +89,11 @@ const CheckOut = () => {
           icon: "success",
           title: "Your Payment successfully done",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
         navigate("/dashboard/paymentHistory");
       }
+
     }
   };
 
