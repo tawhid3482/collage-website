@@ -2,6 +2,12 @@ import AuthHook from "../../../Hooks/AuthHook";
 
 const StHome = () => {
   const { user } = AuthHook();
+// Format current date
+const currentDate = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+
   return (
     <div>
       <div className="flex-col lg:flex-row lg:flex lg:justify-between gap-5 ">
@@ -9,7 +15,7 @@ const StHome = () => {
           <div className="flex justify-between  gap-20 items-center">
             <div className="">
               <p className="text-4xl font-bold">Dashboard</p>
-              <h2 className="text-lg font-medium">date:</h2>
+              <h2 className="text-lg font-medium">date: {formattedDate}</h2>
             </div>
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 uppercase p-3 rounded-md text-white">
               jun-20-2024
@@ -18,7 +24,7 @@ const StHome = () => {
           <div className="md:flex gap-20 my-5 p-5 bg-gradient-to-r from-purple-600 to-pink-600">
             <div className="">
               <img
-                src={user.photoURL}
+                src={user?.photoURL}
                 className="w-40 md:h-40 rounded-full"
                 alt=""
               />
@@ -31,12 +37,12 @@ const StHome = () => {
         </div>
         <div className=" lg:w-80 mx-auto border-2 my-5 border-green-500 p-5">
           <p className=" text-2xl font-bold">My Profile</p>
-          <p className=" text-lg font-medium">date:</p>
+          <h2 className="text-lg font-medium">date: {formattedDate}</h2>
           <div className="">
-            <img src={user.photoURL} className="w-40 md:h-40 rounded-full my-5 ml-20 md:ml-36 lg:ml-10" alt="" />
-            <p className=" text-lg font-medium text-center">Name: {user.displayName}</p>
-            <p className=" text-lg font-medium text-center">Student Id: {user.displayName}</p>
-            <p className=" text-lg font-medium text-center">Department: {user.displayName}</p>
+            <img src={user?.photoURL} className="w-40 md:h-40 rounded-full my-5 ml-20 md:ml-36 lg:ml-10" alt="" />
+            <p className=" text-lg font-medium text-center">Name: {user?.displayName}</p>
+            <p className=" text-lg font-medium text-center">Student Id: {user?.displayName}</p>
+            <p className=" text-lg font-medium text-center">Department: {user?.displayName}</p>
 
           </div>
         </div>

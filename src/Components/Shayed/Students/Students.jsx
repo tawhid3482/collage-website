@@ -4,7 +4,7 @@ import Button from "../Button";
 const Students = () => {
   return (
     <div>
-      <div className="hero  lg:h-[450px] bg-base-200 my-5">
+      <div className="w-full lg:h-[450px] bg-base-200 my-5">
         <div className="hero-content flex-col lg:flex-row gap-8">
           <img src={students} className=" w-full h-[420px]  rounded-lg shadow-2xl" />
           <div className="space-y-3">

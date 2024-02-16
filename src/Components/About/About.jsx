@@ -6,19 +6,19 @@ import Button from "../Shayed/Button";
 const About = () => {
   return (
     <div className="my-10">
-      <div className="flex justify-between items-center ">
-        <div className="w-1/2">
+      <div className=" flex-col md:flex-row md:flex md:justify-between items-center ">
+        <div className="w-full md:w-1/2">
           <div className="flex justify-center items-center gap-3 ml-0">
             <img src={logo} className="w-32 h-24 " alt="" />
             <p className="text-3xl font-bold">Sylhet Polytacnic Institute</p>
           </div>
           <div className="">
-            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500  text-4xl font-bold text-center">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 my-2 md:my-0 text-3xl md:text-4xl font-bold text-center">
               About Our University
             </h2>
           </div>
         </div>
-        <div className="w-3/5 space-y-3">
+        <div className="w-full md:w-3/5 space-y-3">
           <p className="text-2xl font-medium mr-1">
             We are one of the largest, most diverse universities in the USA with
             over 90,000 students in USA, and a further 30,000 studying across

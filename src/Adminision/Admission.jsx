@@ -70,7 +70,7 @@ const Admission = () => {
         <hr className="border border-green-600 w-full my-5" />
       </div>
       <div className="flex-col md:flex-row flex justify-between items-start gap-10 md:p-8">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 w-full p-5 md:p-0">
           <p className="text-3xl font-bold mb-5">Things To Know First</p>
           <h2 className="text-lg text-slate-500">
             The Common Application is required for students applying to any or
@@ -107,9 +107,9 @@ const Admission = () => {
             </button>
           </div>
         </div>
-        <div className="w-full p-3 md:w-1/2">
+        <div className="w-full md:p-3 p-4 md:w-1/2">
           <p className="text-3xl font-bold mb-5">When To Apply?</p>
-          <div className="w-4/5 md:w-full overflow-x-auto my-8">
+          <div className="w-full md:w-full overflow-x-auto my-8">
             <table className="table">
               {/* head */}
               <thead className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg">

@@ -31,6 +31,7 @@ const Footer = () => {
           <Link to='' className="link link-hover">Terms of use</Link>
           <Link to='' className="link link-hover">Privacy policy</Link>
           <Link to='' className="link link-hover">Cookie policy</Link>
+          <Link to='https://protfolio-52046.web.app/' className="link link-hover">Developer Info</Link>
         </nav>
       </footer>
     </div>

@@ -36,10 +36,10 @@ const MyCart = () => {
   return (
     <div>
       <div className="flex justify-between items-center my-4">
-        <p className="text-4xl font-bold">Total Course: {cart?.length}</p>
-        <p className="text-4xl font-bold">Total Fee: {totalPrice}</p>
+        <p className="text-xl md:text-3xl font-bold">Total Course: {cart?.length}</p>
+        <p className="text-xl md:text-3xl font-bold">Total Fee: {totalPrice}</p>
         {cart.length ? <Link to='/dashboard/payment'>
-          <button  className="btn bg-purple-500 text-white text-lg uppercase">Pay</button>
+          <button  className="btn btn-sm bg-purple-500 text-white text-lg uppercase">Pay</button>
           </Link> : 
            <button disabled className="btn bg-purple-500 text-white text-lg uppercase">Pay</button>
           }
