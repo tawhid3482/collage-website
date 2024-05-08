@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const axiosPublic = UseAxiosPublic();
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
+  
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(Auth, email, password);
@@ -52,7 +53,6 @@ const AuthProvider = ({ children }) => {
           if (res.data.token) {
             localStorage.setItem("access-token", res.data.token);
             setLoading(false);
-
           }
         });
       } else {
